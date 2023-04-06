@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Conatacto</title>
+</head>
+
+<body>
+    <!-- Inicion del NavBar -->
+    <header class="nav">
+        <div class="nav-logo">
+            <a href="../index.html"><img src="../multimedia/logo.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-lista">
+            <li><a href="equipos/boca.html" class="nav-item separador">Boca</a></li>
+            <li><a href="equipos/river.html" class="nav-item separador">River</a></li>
+            <li><a href="competencias/liga.html" class="nav-item separador">Liga</a></li>
+            <li><a href="competencias/copas.html" class="nav-item separador">Copas</a></li>
+            <li><a href="contacto.html" class="nav-item">Contacto</a></li>
+        </ul>
+    </header>
+
+
+    <main class="fondo-pasto">
+        <!-- Inicion de la pestaña de Contacto -->
+        <section class="contenido contenido-contacto">
+            <div class="titulos">
+                <h1>Contactanos</h1>
+            </div>
+
+            <div>
+                <form action="">
+                    <!-- Motivo -->
+                    <section class="motivo">
+                        <label for="motivo">
+                            <div class="titulos"><h2>Motivo</h2></div>
+                        </label>
+                        <div class="input">
+                            <div class="opcion-radio"><input type="radio" name="motivo"
+                                class="motivo-marcador-sugerencia" value="sugerencia"><p>Sugerencia</p></div>
+                            <div class="opcion-radio"><input type="radio" name="motivo"
+                                class="motivo-marcador-error" value="bug"><p>Error/Falllo</p></div>
+                        </div>
+
+                    </section>
+
+                    <!-- Nombre -->
+                    <section class="nombre">
+                        <label for="nombre">
+                            <div class="titulos"><h2>Nombre</h2></div>
+                        </label>
+                        <div class="input espacio-de-texto"><input type="text" name="nombre" placeholder="Escribe aquí" class="contacto-input"></div>
+                    </section>
+
+                    <!-- Email -->
+                    <section class="email">
+                        <label for="email">
+                            <div class="titulos"><h2 class="contacto-subtitulo">Email</h2></div>
+                        </label>
+                        <div class="input espacio-de-texto"><input type="email" name="email" placeholder="Escribe aquí" class="contacto-input"></div>
+                    </section>
+
+                    <!-- Area de Texto -->
+                    <section class="area-de-texto">
+                        <textarea name="" id="" cols="110" rows="20" placeholder="Deje su mensaje..."></textarea>
+                    </section>
+
+                    <!-- Botones -->
+                    <section class="botone-contacto">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Resetear</button>
+                    </section>
+
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Inicion del Footer -->
+    <footer class="footer">
+        <ul class="footer-lista">
+            <li><a href="equipos/boca.html" class="footer-item separador">Boca</a></li>
+            <li><a href="equipos/river.html" class="footer-item separador">River</a></li>
+            <li><a href="competencias/liga.html" class="footer-item separador">Liga</a></li>
+            <li><a href="competencias/copas.html" class="footer-item separador">Copas</a></li>
+            <li><a href="contacto.html" class="footer-item">Contacto</a></li>
+        </ul>
+        <p class="footer-logo"><a href="../index.html" class="footer-logo">PRIMERARG</a></p>
+
+        <p class="footer-legales"> PRIMERARG 2023 </p>
+
+        <section class="footer-redes-sociales">
+            <a href=""><img src="../multimedia/redes_sociales/facebook.png" alt="facebook"></a>
+            <a href="https://instagram.com/sofia.maceiras?igshid=YmMyMTA2M2Y="><img
+                    src="../multimedia/redes_sociales/instagram.png" alt="instagram"></a>
+            <a href=""><img src="../multimedia/redes_sociales/twitter.png" alt="twitter"></a>
+        </section>
+    </footer>
+</body>
+
+</html>
