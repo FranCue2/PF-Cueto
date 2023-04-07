@@ -61,7 +61,7 @@
     background-color: #161616;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
     align-items: center;
 }
 
@@ -75,14 +75,41 @@
 .footer-lista{
     list-style-type: none;
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    gap: 5px;
+}
+
+.footer-lista h4{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.footer-lista ul{
+    padding-left: 20px;
+}
+
+.footer-lista li{
+    list-style:circle;
+    padding: 0;
+}
+
+.footer-lista div{
+    display: flex;
+    flex-direction: column;
+    color: rgb(42, 138, 109);
+    font-family: 'Golos Text';
+    text-decoration: none;
 }
 
 .footer-lista a{
     text-decoration: none;
     color: rgb(42, 138, 109);
-    padding: 0 15px;
-    font-size: 20px;
-    font-family: 'Golos Text';
+}
+
+.footer-lista a:hover{
+    color: rgb(10, 88, 202);
 }
 
 .footer-legales{
@@ -1268,3 +1295,16 @@
 
 /* Media Queryes */
 
+/*900px para carusel y proximo Partido*/
+
+@media (max-width: 900px) {
+    
+}
+
+
+/*footer*/
+@media (max-width: 500px) {
+    .footer-lista a {
+        padding: 0 4px;
+    }
+}
