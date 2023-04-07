@@ -9,6 +9,13 @@
     box-sizing: border-box;
 }
 
+
+/*Utiles*/
+.solo-mobile{
+    display: none;
+}
+
+
 /*Inicio de NavBar [flex]*/
 
 .nav{
@@ -1303,8 +1310,30 @@
 
 
 /*footer*/
-@media (max-width: 500px) {
-    .footer-lista a {
-        padding: 0 4px;
+@media (max-width: 520px) {
+    /*Utiles*/
+    .solo-pc{
+        display: none;
+    }
+
+    /*footer*/
+    .footer-lista-mobile{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .footer-lista-mobile button{
+        background-color: #161616;
+        border: none;
+        color: rgb(42, 138, 109)
+    }
+
+    .footer-lista-mobile ul{
+        background-color: #161616;
+    }
+
+    .footer-lista-mobile a{
+        color: rgb(42, 138, 109);
     }
 }
