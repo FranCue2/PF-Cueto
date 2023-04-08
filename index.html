@@ -17,17 +17,109 @@
 <body>
 
     <!-- Inicion del NavBar -->
-    <header class="nav">
-        <div class="nav-logo">
-            <a href="index.html"><img src="multimedia/logo.png" alt="Logo"></a>
-        </div>
-        <ul class="nav-lista">
-            <li><a href="pages/equipos/boca.html" class="separador">Boca</a></li>
-            <li><a href="pages/equipos/river.html" class="separador">River</a></li>
-            <li><a href="pages/competencias/liga.html" class="separador">Liga</a></li>
-            <li><a href="pages/competencias/copas.html" class="separador">Copas</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
+    <header class="navbar-mio">
+        <div class="nav-logo"><a href="index.html"><img src="multimedia/logo.png" alt="Logo"></a></div>
+
+        <ul class="nav-lista solo-pc">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Equipos
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="pages/equipos/boca.html">Boca</a></li>
+                    <li><a class="dropdown-item" href="pages/equipos/river.html">River</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Torneos
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="pages/competencias/liga.html">Liga Profesional</a></li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#copa-argentina">Copa Argentina</a>
+                    </li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#copa-de-la-liga">Copa de la
+                            Liga</a></li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Copa de Campeones</a>
+                    </li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Supercopa</a></li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Supercopa Internacional</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Contacto
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="pages/contacto.html">Sugerencias/Errores</a></li>
+                    <li><a class="dropdown-item" href="">Instagram</a></li>
+                    <li><a class="dropdown-item" href="">Facebook</a></li>
+                    <li><a class="dropdown-item" href="">Twitter</a></li>
+                </ul>
+            </div>
         </ul>
+
+        <section class="navbar bg-body-tertiary fixed-top solo-mobile">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Inicio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav nav-lista justify-content-end flex-grow-1 pe-3">
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Equipos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Boca Juniors</a></li>
+                                    <li><a class="dropdown-item" href="#">River Plate</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Torneos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/competencias/liga.html">Liga Profesional</a></li>
+                                    <li><a class="dropdown-item" href="pages/competencias/copas.html#copa-argentina">Copa Argentina</a></li>
+                                    <li><a class="dropdown-item" href="pages/competencias/copas.html#copa-de-la-liga">Copa de la Liga</a></li>
+                                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Copa de Campeones</a></li>
+                                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Supercopa</a></li>
+                                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Supercopa Internacional</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Contacto
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/contacto.html">Sugerencias/Errores</a></li>
+                                    <li><a class="dropdown-item" href="">Instagram</a></li>
+                                    <li><a class="dropdown-item" href="">Facebook</a></li>
+                                    <li><a class="dropdown-item" href="">Twitter</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
     </header>
 
 
@@ -80,20 +172,22 @@
                 <div class="titulos">
                     <h2>Trofeos</h2>
                 </div>
-                
+
                 <div id="carouselExample" class="carousel carousel-fade">
                     <div class="carousel-inner carusel-trofeos">
                         <div class="contenido-carusel">
-                            <button class="carousel-control-prev flechas-trofeos flechas-trofeos-izq" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <button class="carousel-control-prev flechas-trofeos flechas-trofeos-izq" type="button"
+                                data-bs-target="#carouselExample" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-    
+
                             <section class="carousel-item active">
                                 <div class="fichas_trofeo">
-    
-                                    <img src="multimedia/trofeos/trofeo-liga-profesional.png" alt="trofeo-liga-profesional">
-    
+
+                                    <img src="multimedia/trofeos/trofeo-liga-profesional.png"
+                                        alt="trofeo-liga-profesional">
+
                                     <section class="texto-ficha">
                                         <div class="contenido-ficha">
                                             <div class="titulos">
@@ -111,20 +205,21 @@
                                                 </p>
                                             </div>
                                         </div>
-    
+
                                         <button>
                                             <a href="pages/competencias/copas.html#copa-de-la-liga">Ver Más</a>
                                         </button>
-    
+
                                     </section>
                                 </div>
                             </section>
-    
+
                             <section class="carousel-item">
                                 <div class="fichas_trofeo">
-    
-                                    <img src="multimedia/trofeos/trofeo-copa-de-la-liga.png" alt="trofeo-copa-de-la-liga">
-    
+
+                                    <img src="multimedia/trofeos/trofeo-copa-de-la-liga.png"
+                                        alt="trofeo-copa-de-la-liga">
+
                                     <section class="texto-ficha">
                                         <div class="contenido-ficha">
                                             <div class="titulos">
@@ -142,20 +237,20 @@
                                                 </p>
                                             </div>
                                         </div>
-    
+
                                         <button>
                                             <a href="pages/competencias/copas.html#copa-de-la-liga">Ver Más</a>
                                         </button>
-    
+
                                     </section>
                                 </div>
                             </section>
-    
+
                             <section class="carousel-item">
                                 <div class="fichas_trofeo">
-    
+
                                     <img src="multimedia/trofeos/trofeo-copa-argentina.png" alt="trofeo-copa-argentina">
-    
+
                                     <section class="texto-ficha">
                                         <div class="contenido-ficha">
                                             <div class="titulos">
@@ -173,20 +268,20 @@
                                                 </p>
                                             </div>
                                         </div>
-    
+
                                         <button>
                                             <a href="pages/competencias/copas.html#copa-de-la-liga">Ver Más</a>
                                         </button>
-    
+
                                     </section>
                                 </div>
                             </section>
-    
+
                             <section class="carousel-item">
                                 <div class="fichas_trofeo">
-    
+
                                     <img src="multimedia/trofeos/trofeo-de-campeones.png" alt="trofeo-de-campeones">
-    
+
                                     <section class="texto-ficha">
                                         <div class="contenido-ficha">
                                             <div class="titulos">
@@ -204,20 +299,20 @@
                                                 </p>
                                             </div>
                                         </div>
-    
+
                                         <button>
                                             <a href="pages/competencias/copas.html#copa-de-la-liga">Ver Más</a>
                                         </button>
-    
+
                                     </section>
                                 </div>
                             </section>
-    
+
                             <section class="carousel-item">
                                 <div class="fichas_trofeo">
-    
+
                                     <img src="multimedia/trofeos/trofeo-supercopa.png" alt="trofeo-de-la-supercopa">
-    
+
                                     <section class="texto-ficha">
                                         <div class="contenido-ficha">
                                             <div class="titulos">
@@ -235,21 +330,21 @@
                                                 </p>
                                             </div>
                                         </div>
-    
+
                                         <button>
                                             <a href="pages/competencias/copas.html#copa-de-la-liga">Ver Más</a>
                                         </button>
-    
+
                                     </section>
                                 </div>
                             </section>
-    
+
                             <section class="carousel-item">
                                 <div class="fichas_trofeo">
-    
+
                                     <img src="multimedia/trofeos/trofeo-supercopa-internacional.png"
                                         alt="trofeo-supercopa-internacional">
-    
+
                                     <section class="texto-ficha">
                                         <div class="contenido-ficha">
                                             <div class="titulos">
@@ -267,21 +362,22 @@
                                                 </p>
                                             </div>
                                         </div>
-    
+
                                         <button>
                                             <a href="pages/competencias/copas.html#copa-de-la-liga">Ver Más</a>
                                         </button>
-    
+
                                     </section>
                                 </div>
                             </section>
-    
-                            <button class="carousel-control-next flechas-trofeos flechas-trofeos-der" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+
+                            <button class="carousel-control-next flechas-trofeos flechas-trofeos-der" type="button"
+                                data-bs-target="#carouselExample" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
@@ -331,7 +427,8 @@
 
         <section class="footer-lista-mobile solo-mobile">
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     Equipos
                 </button>
                 <ul class="dropdown-menu">
@@ -340,20 +437,26 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     Torneos
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="pages/competencias/liga.html">Liga Profesional</a></li>
-                    <li><a class="dropdown-item" href="pages/competencias/copas.html#copa-argentina">Copa Argentina</a></li>
-                    <li><a class="dropdown-item" href="pages/competencias/copas.html#copa-de-la-liga">Copa de la Liga</a></li>
-                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Copa de Campeones</a></li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#copa-argentina">Copa Argentina</a>
+                    </li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#copa-de-la-liga">Copa de la
+                            Liga</a></li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Copa de Campeones</a>
+                    </li>
                     <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Supercopa</a></li>
-                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Supercopa Internacional</a></li>
+                    <li><a class="dropdown-item" href="pages/competencias/copas.html#otras-copas">Supercopa
+                            Internacional</a></li>
                 </ul>
             </div>
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     Contacto
                 </button>
                 <ul class="dropdown-menu">

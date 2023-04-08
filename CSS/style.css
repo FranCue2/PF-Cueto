@@ -18,8 +18,64 @@
 
 /*Inicio de NavBar [flex]*/
 
-.nav{
+.navbar-mio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgb(23, 23, 23);
+    padding: 0 5px;
+    height: 90px;
+}
+
+.nav-logo{
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+}
+
+.nav-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-lista{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.nav-lista a{
+    color: rgb(42, 138, 109);
+}
+
+.nav-lista a:hover{
+    color: rgb(10, 88, 202);
+    background-color: rgb(23,23,23);
+}
+
+.nav-lista button{
+    background-color: rgb(23, 23, 23);
+    border: none;
+    color: rgb(42, 138, 109);
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Golos Text';
+}
+
+.nav-lista button:focus, .nav-lista button:hover{
+    color: rgb(10, 88, 202);
+    background-color: rgb(23, 23, 23);
+}
+
+.dropdown-menu{
+    background-color: rgb(23,23,23);
+}
+
+
+/* .nav{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,22 +84,9 @@
     padding: 0 20px;
 }
 
-.nav-lista{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-}
 
-.nav-logo{
-    width: 70px;
-    height: 70px;
-}
 
-.nav-logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 
 .separador{
     border-right: 2px rgb(128, 128, 128) solid;
@@ -55,7 +98,7 @@
     padding: 0 15px;
     font-size: 20px;
     font-family: 'Golos Text';
-}
+} */
 
 /*Fin de NavBar*/
 
@@ -1358,10 +1401,42 @@
 
 
 /*footer*/
-@media (max-width: 520px) {
+@media (max-width: 580px) {
     /*Utiles*/
     .solo-pc{
         display: none;
+    }
+
+    /*NavBar*/
+
+    .navbar{
+        display: flex;
+        position: relative;
+    }
+
+    .navbar-toggler{
+        color: rgb(42, 138, 109);
+    }
+
+    .navbar-toggler-icon{
+        background-image: url(../multimedia/varios/sanguchito.png);
+    }
+
+    .navbar h5{
+        color: rgb(42, 138, 109);
+    }
+
+
+    .dropdown-menu a{
+        color: rgb(42, 138, 109);
+    }
+
+    .nav-link:focus{
+        color: rgb(42, 138, 109);
+    }
+
+    .offcanvas{
+        background-color: rgb(23,23,23);
     }
 
     /*Footer*/
