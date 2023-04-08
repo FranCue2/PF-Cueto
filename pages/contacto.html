@@ -15,47 +15,109 @@
 
 <body>
     <!-- Inicion del NavBar -->
-    <header class="navbar">
-        <div class="nav-logo"><a href="index.html"><img src="multimedia/logo.png" alt="Logo"></a></div>
-        
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
-                    aria-expanded="false">Dropdown</a>
+    <header class="navbar-mio">
+        <div class="nav-logo"><a href="../index.html"><img src="../multimedia/logo.png" alt="Logo"></a></div>
+
+        <ul class="nav-lista solo-pc">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Equipos
+                </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item active" href="contacto.html">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    <li><a class="dropdown-item" href="equipos/boca.html">Boca</a></li>
+                    <li><a class="dropdown-item" href="equipos/river.html">River</a></li>
                 </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-            </li>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Torneos
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="competencias/liga.html">Liga Profesional</a></li>
+                    <li><a class="dropdown-item" href="competencias/copas.html#copa-argentina">Copa Argentina</a>
+                    </li>
+                    <li><a class="dropdown-item" href="competencias/copas.html#copa-de-la-liga">Copa de la
+                            Liga</a></li>
+                    <li><a class="dropdown-item" href="competencias/copas.html#otras-copas">Copa de Campeones</a>
+                    </li>
+                    <li><a class="dropdown-item" href="competencias/copas.html#otras-copas">Supercopa</a></li>
+                    <li><a class="dropdown-item" href="competencias/copas.html#otras-copas">Supercopa Internacional</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Contacto
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="contacto.html">Sugerencias/Errores</a></li>
+                    <li><a class="dropdown-item" href="">Instagram</a></li>
+                    <li><a class="dropdown-item" href="">Facebook</a></li>
+                    <li><a class="dropdown-item" href="">Twitter</a></li>
+                </ul>
+            </div>
         </ul>
 
+        <section class="navbar bg-body-tertiary fixed-top solo-mobile">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Contacto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav nav-lista justify-content-end flex-grow-1 pe-3">
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Equipos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="equipos/boca.html">Boca Juniors</a></li>
+                                    <li><a class="dropdown-item" href="equipos/river.html">River Plate</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Torneos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="competencias/liga.html">Liga Profesional</a></li>
+                                    <li><a class="dropdown-item" href="competencias/copas.html#copa-argentina">Copa Argentina</a></li>
+                                    <li><a class="dropdown-item" href="competencias/copas.html#copa-de-la-liga">Copa de la Liga</a></li>
+                                    <li><a class="dropdown-item" href="competencias/copas.html#otras-copas">Copa de Campeones</a></li>
+                                    <li><a class="dropdown-item" href="competencias/copas.html#otras-copas">Supercopa</a></li>
+                                    <li><a class="dropdown-item" href="competencias/copas.html#otras-copas">Supercopa Internacional</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Contacto
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="contacto.html">Sugerencias/Errores</a></li>
+                                    <li><a class="dropdown-item" href="">Instagram</a></li>
+                                    <li><a class="dropdown-item" href="">Facebook</a></li>
+                                    <li><a class="dropdown-item" href="">Twitter</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
-        <!-- <div class="nav-logo">
-            
-        </div>
-        <ul class="nav-lista">
-            <li><a href="pages/equipos/boca.html" class="separador">Boca</a></li>
-            <li><a href="pages/equipos/river.html" class="separador">River</a></li>
-            <li><a href="pages/competencias/liga.html" class="separador">Liga</a></li>
-            <li><a href="pages/competencias/copas.html" class="separador">Copas</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-        </ul> -->
     </header>
 
     <main class="fondo-pasto">
