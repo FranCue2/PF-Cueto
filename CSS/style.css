@@ -73,33 +73,6 @@
     background-color: rgb(23,23,23);
 }
 
-
-/* .nav{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    padding: 0 20px;
-}
-
-
-
-
-
-.separador{
-    border-right: 2px rgb(128, 128, 128) solid;
-}
-
-.nav-lista a{
-    text-decoration: none;
-    color: rgb(42, 138, 109);
-    padding: 0 15px;
-    font-size: 20px;
-    font-family: 'Golos Text';
-} */
-
 /*Fin de NavBar*/
 
 
@@ -1400,7 +1373,6 @@
 }
 
 
-/*footer*/
 @media (max-width: 580px) {
     /*Utiles*/
     .solo-pc{
@@ -1468,6 +1440,11 @@
 
     /* Index */
 
+    /* Portada */
+
+    .incio-portada p{
+        font-size: 37px;
+    }
 
     /* Trofeos */
 
