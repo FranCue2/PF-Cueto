@@ -211,9 +211,15 @@
 .proximo-partido-general{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 700px;
+    justify-content: flex-end;
+    height: fit-content;
     width: 98%;
+    border: 2px rgb(0,0,0) solid;
+    background-color: rgb(23,23,23);
+    color: rgb(42, 138, 109);
+    margin: 10px 0;
+    padding-bottom: 0;
+    padding-top: 10px;
 }
 
 .proximo-partido-item{
@@ -224,9 +230,11 @@
                         'local local .. visitante visitante'
                         'data-local data-local boton data-visitante data-visitante'
     ;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     height: 600px;
     width: 100%;
-    border: 1px rgb(0,0,0) solid;
+    border-top: 1px rgb(0,0,0) solid;
+    background-size: cover;
 }
 
 .carousel-item.active{
@@ -294,6 +302,53 @@
     position: relative;
 }
 
+.data-local{
+    grid-area: data-local;
+    background-color: rgb(23,23,23);
+    color: rgb(42, 138, 109);
+    border: 2px rgb(8, 8, 8) solid;
+    border-bottom: none;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.data-local p{
+    margin: 0;
+}
+
+.data-local h4{
+    margin: 0;
+}
+
+.data-local span{
+    color: rgb(255, 166, 0);
+}
+
+.data-visitante{
+    grid-area: data-visitante;
+    background-color: rgb(23,23,23);
+    color: rgb(42, 138, 109);
+    border: 2px rgb(8, 8, 8) solid;
+    border-bottom: none;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.data-visitante p{
+    margin: 0;
+}
+
+.data-visitante h4{
+    margin: 0;
+}
+
+.data-visitante span{
+    color: rgb(255, 166, 0);
+}
 
 .fondo-bombonera-dentro{
     background-image: url(../multimedia/la-bombonera-adentro.jpg);
@@ -306,6 +361,8 @@
 .fondo-monumental{
     background-image: url(../multimedia/monumental.jpg);
 }
+
+
 
 /* .proximo-partido-expositor{
     display: flex;
@@ -1399,6 +1456,12 @@
 
 
     /* Index */
+
+
+    /* Proximo Partido */
+
+    
+
 
     /* Trofeos */
 
