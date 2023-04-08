@@ -275,9 +275,9 @@
     grid-template-areas:'v ..'
                         '.. s'
     ;
-    width: 100%;
-    height: 100%;
     border-radius: 100%;
+    height: fit-content;
+    width: fit-content;
 }
 
 .v{
@@ -364,30 +364,7 @@
 
 
 
-/* .proximo-partido-expositor{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 95%;
-    height: 500px;
-    background-image: url(../multimedia/la-bombonera-adentro.jpg);
-    background-repeat: none;
-    background-position: center;
-    background-size: cover;
-    border: 3px #161616 solid;
-}
 
-
-
-.vs{
-    font-family: 'Frank+Ruhl+Libre';
-    font-weight: 600;
-    font-size: 100px;
-    text-align: center;
-    background-color: rgba(151, 45, 45, 0.63);
-    padding: 0 10px;
-    border: 1px rgb(0, 0, 0) solid;
-} */
 /*Inicio de Trofeos*/
 
 .trofeos{
@@ -1460,9 +1437,31 @@
 
     /* Proximo Partido */
 
+    .proximo-partido-item img{
+        width: 200px;
+    }
+
+    .proximo-partido-item h3{
+        width: 200px;
+        text-align: center;
+    }
+
+    .vs{
+        display: flex;
+        justify-content: center;
+    }
+    .v{
+        align-self: self-start;
+        right: -20px;
+        bottom: 10px;
+    }
     
+    .s{
+        align-self: self-end;
+        left: -20px;
+        top: 10px;
 
-
+    }
     /* Trofeos */
 
     /* Expositori de Trofeos */
