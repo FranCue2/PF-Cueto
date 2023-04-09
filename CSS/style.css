@@ -10,6 +10,12 @@
 }
 
 
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+
 /*Utiles*/
 .solo-mobile{
     display: none;
@@ -160,12 +166,14 @@
     font-family: 'Rubik';
     font-size:50px;
     text-align: center;
+    margin: 0;
 }
 
 .titulos h2{
     font-family: 'Rubik';
     font-size:40px;
     text-align: center;
+    margin: 0;
 }
 
 .contenido{
@@ -278,6 +286,8 @@
     border-radius: 100%;
     height: fit-content;
     width: fit-content;
+    align-self: center;
+    justify-self: center;
 }
 
 .v{
@@ -556,6 +566,8 @@ form{
     width: 100%;
 }
 
+
+
 .tabla-liga h2{
     background-color: #161616;
     color: rgb(42, 138, 109);
@@ -645,12 +657,15 @@ form{
     background-color: #161616;
     color: rgb(42, 138, 109);
     width: 100%;
+    margin: 0;
 }
 
 .fecha ol{
     display: flex;
     border-top: 3px rgb(0, 0, 0) solid;
     border-bottom: 3px rgb(0, 0, 0) solid;
+    padding: 0;
+    margin: 0;
 }
 
 .fecha li{
@@ -692,6 +707,10 @@ form{
     border-left: 1px rgb(0, 0, 0) solid;
     border-right: 1px rgb(0, 0, 0) solid;
     font-weight: 500;
+}
+
+.fecha-quienes-goles p{
+    margin: 0;
 }
 
 .fecha-quienes-goles span{
