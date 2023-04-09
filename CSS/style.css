@@ -362,9 +362,6 @@
     background-image: url(../multimedia/monumental.jpg);
 }
 
-
-
-
 /*Inicio de Trofeos*/
 
 .trofeos{
@@ -1582,6 +1579,47 @@
         font-size: 37px;
     }
 
+
+
+    /* Proximo Partido */
+
+    .carusel-proximo-partido{
+        display: block;
+    }
+
+
+    .proximo-partido-img-mobile.active{
+        display: flex;
+    }
+
+    .proximo-partido-img-mobile{
+        display: none;
+        background-image: url(../multimedia/varios/separador-celu.png);
+        background-size: cover;
+        background-position: center;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 320px;
+        padding: 35px 10px;
+    }
+
+    .proximo-partido-img-mobile img{
+        max-width: 40%;
+    }
+
+    .proximo-partido-local{
+        align-self: flex-start;
+        display: flex;
+        align-items: self-start;
+        padding-left: 10px;
+    }
+
+    .proximo-partido-visitante{
+        align-self: flex-end;
+        display: flex;
+        align-items: self-end;
+        padding-right: 10px;
+    }
     /* Trofeos */
 
     .trofeos{
