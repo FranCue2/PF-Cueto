@@ -472,35 +472,53 @@
 
 /*Inicio de contacto [flex]*/
 
-.contenido-contacto{
+form{
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 10px 40px;
+    gap: 10px;
+}
+.contenido-contacto{
+    padding-top: 10px;
+    padding-bottom: 40px;
 }
 
 .contenido-contacto h2{
     text-align: left;
     font-size: 25px;
+    margin: 0;
 }
 
-.input{
+.input-motivo{
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 4px;
+    padding: 0 4px;
 }
 
 .opcion-radio{
     display: flex;
+    align-items: center;
     gap: 2px;
 }
 
+.opcion-radio p{
+    padding: 0;
+    margin: 0;
+}
+
 .espacio-de-texto{
-    width:15%;
+    width: 200px;
 }
 
 .area-de-texto textarea{
     width: 100%;
+    height: 280px;
+    resize:none;
+}
+
+.botone-contacto button{
+    padding: 0 4px;
 }
 
 /*Fin de Contacto*/
@@ -1475,6 +1493,7 @@
         justify-self: center;
         border: none;
     }
+
     .texto-ficha {
         position: absolute;
         height: 100%;
@@ -1661,6 +1680,8 @@
     }
     /* Fin Index */
 
-
-
+    /* Contacto*/
+    .botone-contacto{
+        align-self: center;
+    }
 }
