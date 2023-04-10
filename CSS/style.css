@@ -15,6 +15,10 @@ ul{
     margin: 0;
 }
 
+th{
+    text-align: center;
+}
+
 
 /*Utiles*/
 .solo-mobile{
@@ -499,23 +503,52 @@ form{
     margin: 0;
 }
 
-.input-motivo{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 0 4px;
+.form-check-input:hover{
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+    filter: brightness(90%);
 }
 
-.opcion-radio{
-    display: flex;
-    align-items: center;
-    gap: 2px;
+.form-check-input:checked {
+    background-color: rgb(42, 138, 109);
+    border-color: rgb(0,0,0);
 }
 
-.opcion-radio p{
-    padding: 0;
-    margin: 0;
+.form-check-input{
+    background-color: rgb(23,23,23);
+    border: 1px solid rgba(0,0,0);
 }
+
+.form-check-input:checked[type=radio] {
+    background-image: url(../multimedia/varios/circulo-gris-lindo.png);
+}
+
+
+
+.form-text-input span{
+    background-color: rgb(14, 14, 14);
+    color: rgb(33, 107, 85);
+    font-weight: 600;
+    width: fit-content;
+    border: 1px rgb(0, 0, 0) solid;
+}
+
+.form-text-input input{
+    background-color: rgb(23,23,23);
+    color: rgb(42, 138, 109);
+    width: fit-content;
+    border: 1px rgb(0, 0, 0) solid;
+}
+
+.form-text-input input:hover, .form-text-input input:focus{
+    border: 2px rgb(0, 0, 0) solid;
+    background-color: rgb(23,23,23);
+    color: rgb(42, 138, 109);
+    outline: 0;
+    box-shadow: none;
+    filter: brightness(90%);
+}
+
 
 .espacio-de-texto{
     width: 200px;
@@ -525,10 +558,46 @@ form{
     width: 100%;
     height: 280px;
     resize:none;
+    border: 2px rgb(0, 0, 0) solid;
+    background-color: rgb(23,23,23);
+    color: rgb(42, 138, 109);
+}
+
+.form-floating>.form-control, .form-floating>.form-control-plaintext, .form-floating>.form-select {
+    height: 280px;
+    line-height: 1.25;
+}
+
+
+
+.area-de-texto textarea:focus, .area-de-texto textarea:hover{
+    width: 100%;
+    height: 280px;
+    resize:none;
+    border: 2px rgb(0, 0, 0) solid;
+    background-color: rgb(23,23,23);
+    color: rgb(42, 138, 109);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+    filter: brightness(90%);
+}
+
+.area-de-texto label{
+    color: rgb(42, 138, 109);
 }
 
 .botone-contacto button{
-    padding: 0 4px;
+    padding: 2px 6px;
+    border-radius: 20px;
+    border: 2px rgb(0, 0, 0) solid;
+    background-color: rgb(23,23,23);
+    color: rgb(42, 138, 109);
+}
+
+.botone-contacto button:hover{
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+    filter: brightness(90%);
 }
 
 /*Fin de Contacto*/
@@ -638,7 +707,6 @@ form{
     background-color: #161616;
     font-family: 'Golos Text';
     color: rgb(42, 138, 109);
-
 }
 
 .tabla-start{
@@ -1702,5 +1770,17 @@ form{
     /* Contacto*/
     .botone-contacto{
         align-self: center;
+    }
+
+    .input-mobile{
+        display: block;
+    }
+    
+    .input-mobile::placeholder { 
+        color: rgb(42, 138, 109); 
+    }
+
+    .input-mobile:focus::placeholder { 
+        color: rgba(42, 138, 109, 0.397); 
     }
 }
