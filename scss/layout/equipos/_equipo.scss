@@ -1,0 +1,240 @@
+.contenido-equipo{
+    display: grid;
+    padding: 20px 5px;
+    justify-content: space-around;
+    grid-template-columns: 56.45px 225.8px 225.8px 112.9px 225.8px 225.8px 56.45px;
+    grid-template-rows: auto;
+    grid-template-areas:'entrada_equipo entrada_equipo entrada_equipo entrada_equipo calendario calendario ..'
+                        '.. tabla_liga tabla_liga .. rival_historico rival_historico ..'
+                        '.. tabla_liga tabla_liga .. ultimo_plantel ultimo_plantel ..'
+                        '.. tabla_liga tabla_liga .. ultimo_plantel ultimo_plantel ..'
+                        '.. campeones_nacionales campeones_nacionales .. campeones_internacionales campeones_internacionales ..'
+                        '.. campeones_nacionales campeones_nacionales .. campeones_internacionales campeones_internacionales ..'
+    ;
+}
+
+/*Portada Equipo*/
+.entrada_equipo{
+    grid-area: entrada_equipo;
+    display: grid;
+    grid-template-columns: 127px 480px;
+    grid-template-rows: repeat(2,45%);
+    grid-template-areas:'logo nombre'
+                        'detalles detalles'
+                        ;
+    background-color: rgba(23, 23, 23, 0.466);
+    background-image: url(../multimedia/bombonera.png);
+    background-size: cover;
+    background-blend-mode: color;
+    height: 400px;
+    gap: 20px;
+    border: 2px rgb(0, 0, 0) solid;
+    padding: 10px;
+
+    img{
+        height: 150px;
+    }
+
+    h1{
+        color: rgb(235, 235, 235);
+        text-align: left;
+    }
+    
+    p{
+        color: rgb(201, 201, 201);
+    }
+}
+
+.entrada_cancha{
+    position: absolute;
+}
+
+.logo_entrada{
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombre_entrada{
+    grid-area: nombre;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.detalles_entrada{
+    grid-area: detalles;
+    display: flex;
+}
+
+/*Calendario*/
+
+.calendario{
+    grid-area: calendario;
+    align-self: center;
+    justify-self: center;
+}
+
+.otro-mes{
+    color: rgb(109, 109, 109);
+    border: 2px rgb(0, 0, 0) solid;
+}
+
+.nombre-dia{
+    padding: 1px 3px;
+    border: 2px rgb(0, 0, 0) solid;
+    font-size: 15px;
+    color: $text_color_fondo_elementos;
+    font-family: 'Golos Text';
+    background-color: rgb(23, 23, 23);
+}
+
+.dias{
+    background-color: rgb(201, 201, 201);
+    border: 1px rgb(0, 0, 0) solid;
+    text-align: center;
+}
+
+.partido-liga{
+    background-color: rgb(173, 255, 47);
+}
+
+.partido-copa-argentina{
+    background-color: rgb(70, 255, 193);
+}
+
+.partido-supercopa{
+    background-color: rgb(255, 255, 0);
+}
+
+.nombre-mes{
+    background-color: rgb(23, 23, 23);
+    font-size: 20px;
+    color: $text_color_fondo_elementos;
+    font-family: 'Golos Text';
+}
+
+.calendario table{
+    border-collapse: collapse;
+    border: 2px rgb(0, 0, 0) solid;
+    width: 400px;
+    height: 250px;
+}
+
+
+/*Tabla Liga Equipo*/
+
+.tabla-liga-equipo{
+    grid-area: tabla_liga;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+.equipo-en-tabla{
+    td{
+        background-color: rgba(82, 163, 136, 0.459);
+    }
+} 
+
+
+/*Rival Historico*/
+
+.rival-historico{
+    grid-area: rival_historico;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 2px;
+    background-color: rgba(255, 255, 255, 0.788);
+    border: 3px rgb(0, 0, 0) solid;
+
+    h2{
+        border-bottom: 2px solid rgb(0, 0, 0);
+        background-color: $fondo_elementos;
+        color: $text_color_fondo_elementos;
+    }
+}
+
+/*Ultimo Plantel*/
+
+.ultimo-plantel{
+    grid-area: ultimo_plantel;
+    padding-top: 10px;
+
+    h2{
+        border: 3px rgb(0, 0, 0) solid;
+        border-bottom: none;
+        background-color: $fondo_elementos;
+        color: $text_color_fondo_elementos;
+    }
+
+    img{
+        width: 100%;
+        border: 3px rgb(0, 0, 0) solid;
+    }
+}
+
+
+/*Tablas Torneos*/
+
+.ranking-de-campeonatos-nacionales-equipo{
+    grid-area: campeones_nacionales;
+    padding-top: 10px;
+}
+
+.ranking-de-campeonatos-internacional-equipo{
+    grid-area: campeones_internacionales;
+    padding-top: 10px;
+}
+
+.ranking-de-campeonatos-equipo{
+    width: 100%;
+    table{
+        border-collapse: collapse;
+        border: 3px rgb(0, 0, 0) solid;
+
+        tr{
+            &:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.788);
+            }
+        
+            &:nth-child(even) {
+            background-color: rgb(204, 204, 204);
+            }
+        }
+
+        th{
+            border: 3px rgb(0, 0, 0) solid;
+            background-color: $fondo_elementos;
+            font-family: 'Golos Text';
+            color: $text_color_fondo_elementos;
+            text-align: center;
+            padding: 0 3px;
+        }
+
+        td{
+            border: 1px solid rgba(39, 39, 39, 0.774);
+        }
+    }
+}
+
+.torneo{
+    width: 29%;
+    padding: 10px 0;
+}
+
+.ranking-de-campeonatos-equipo-cant{
+    text-align: center;
+    width: 13%;
+
+    span{
+        font-weight: 600;
+    }
+}
+
+.ediciones{
+    width: 58%;
+}

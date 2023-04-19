@@ -1,12 +1,10 @@
-/* Media Queryes */
-
 /*900px para carusel y proximo Partido*/
 
 @media (max-width: 900px) {
 
     /*General*/
 
-    .contenido{
+    .contenido {
         margin: 0;
     }
 
@@ -16,155 +14,165 @@
 
     /* Proximo Partido */
 
-    .proximo-partido-item img{
-        width: 200px;
+    .proximo-partido-item {
+
+        img {
+            width: 200px;
+        }
+
+        .proximo-partido-item h3 {
+            width: 200px;
+            text-align: center;
+        }
+
+        .vs {
+            display: flex;
+            justify-content: center;
+        }
+
+        .v {
+            align-self: self-start;
+            right: -20px;
+            bottom: 10px;
+        }
+
+        .s {
+            align-self: self-end;
+            left: -20px;
+            top: 10px;
+
+        }
     }
 
-    .proximo-partido-item h3{
-        width: 200px;
-        text-align: center;
-    }
-
-    .vs{
-        display: flex;
-        justify-content: center;
-    }
-    .v{
-        align-self: self-start;
-        right: -20px;
-        bottom: 10px;
-    }
-    
-    .s{
-        align-self: self-end;
-        left: -20px;
-        top: 10px;
-
-    }
     /* Trofeos */
 
     /* Expositori de Trofeos */
 
-    .contenido-carusel{
+    .contenido-carusel {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+
+        section {
+            width: fit-content;
+        }
+
+        .texto-ficha {
+            position: absolute;
+            height: 100%;
+            background-color: rgba(22, 22, 22, 0.493);
+            width: 100%;
+
+            p,
+            h3 {
+                color: rgb(126, 206, 182);
+            }
+        }
+
+        .fichas_trofeo {
+            width: min-content;
+            display: flex;
+            position: relative;
+
+            img {
+                display: flex;
+                justify-self: center;
+                border: none;
+            }
+
+            section {
+                width: 100%;
+            }
+        }
     }
 
-    .fichas_trofeo img{
-        display: flex;
-        justify-self: center;
-        border: none;
-    }
-
-    .texto-ficha {
-        position: absolute;
-        height: 100%;
-        background-color: rgba(22, 22, 22, 0.493);
-        width: 100%;
-    }
-
-    .texto-ficha p, .texto-ficha h3{
-        color: rgb(126, 206, 182);
-    }
-
-    .contenido-carusel section{
-        width: fit-content;
-    }
-
-    .fichas_trofeo{
-        width: min-content;
-        display: flex;
-        position: relative;
-    }
-
-    .fichas_trofeo section{
-        width: 100%;
-    }
-
-    ::after{
+    ::after {
         display: none;
     }
 }
 
 
 @media (max-width: 580px) {
+
     /*Utiles*/
-    .solo-pc{
+    .solo-pc {
         display: none;
     }
 
     /*NavBar*/
 
-    .navbar-mio{
-    
-        .navbar{
+    .navbar-mio {
+
+        .navbar {
             display: flex;
             position: relative;
-            h5{
+
+            h5 {
                 color: $text_color_fondo_elementos;
             }
         }
-    
-        .navbar-toggler{
+
+        .navbar-toggler {
             color: $text_color_fondo_elementos;
         }
-    
-        .navbar-toggler-icon{
+
+        .navbar-toggler-icon {
             background-image: url(../multimedia/varios/sanguchito.png);
         }
-    
-        .nav-lista{
+
+        .nav-lista {
             height: max-content;
             @include flex(column, space-evenly, center, wrap, 20px)
         }
-    
-        .dropdown-menu{
+
+        .dropdown-menu {
             border: none;
 
-            a{
+            a {
                 text-align: center;
                 color: $text_color_fondo_elementos;
             }
         }
-    
-        .nav-link{
+
+        .nav-link {
             text-align: center;
 
-            &:focus{
+            &:focus {
                 color: $text_color_fondo_elementos;
             }
         }
-    
-        .offcanvas{
-            background-color: rgb(23,23,23);
+
+        .offcanvas {
+            background-color: rgb(23, 23, 23);
         }
     }
 
-    
+
 
     /*Footer*/
 
-    .footer-lista-mobile{
+    .footer-lista-mobile {
         display: flex;
         justify-content: space-evenly;
         width: 100%;
+
+
+        button {
+            background-color: $fondo_elementos;
+            border: none;
+            color: $text_color_fondo_elementos;
+        }
+
+        ul {
+            background-color: $fondo_elementos;
+        }
+
+        a {
+            color: $text_color_fondo_elementos;
+        }
     }
 
-    .footer-lista-mobile button{
-        background-color: $fondo_elementos;
-        border: none;
-        color: $text_color_fondo_elementos;
-    }
-
-    .footer-lista-mobile ul{
-        background-color: $fondo_elementos;
-    }
-
-    .footer-lista-mobile a{
-        color: $text_color_fondo_elementos;
-    }
 
     /* Fin Footer */
 
@@ -175,24 +183,28 @@
 
     /* Portada */
 
-    .incio-portada p{
-        font-size: 37px;
+    .incio-portada{ 
+        p {
+            font-size: 37px;
+        }
     }
 
 
 
     /* Proximo Partido */
 
-    .carusel-proximo-partido{
+    .carusel-proximo-partido {
         display: block;
     }
 
 
-    .proximo-partido-img-mobile.active{
-        display: flex;
+    .proximo-partido-general {
+        .carousel-item.active {
+            display: flex;
+        }
     }
 
-    .proximo-partido-img-mobile{
+    .proximo-partido-img-mobile {
         display: none;
         background-image: url(../multimedia/varios/separador-celu.png);
         background-size: cover;
@@ -201,80 +213,83 @@
         justify-content: space-between;
         gap: 320px;
         padding: 35px 10px;
+
+        img {
+            max-width: 40%;
+        }
+
+        .proximo-partido-local {
+            align-self: flex-start;
+            display: flex;
+            justify-content: left;
+            padding-left: 10px;
+        }
+    
+        .proximo-partido-visitante {
+            align-self: flex-end;
+            display: flex;
+            justify-content: right;
+            padding-right: 10px;
+        }
     }
 
-    .proximo-partido-img-mobile img{
-        max-width: 40%;
-    }
-
-    .proximo-partido-local{
-        align-self: flex-start;
-        display: flex;
-        align-items: self-start;
-        padding-left: 10px;
-    }
-
-    .proximo-partido-visitante{
-        align-self: flex-end;
-        display: flex;
-        align-items: self-end;
-        padding-right: 10px;
-    }
     /* Trofeos */
 
-    .trofeos{
+    .trofeos {
         align-items: center;
         width: 100%;
+
+        .carusel-trofeo {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .contenido-carusel {
+            display: grid;
+            grid-template-areas: 'img img'
+                'flecha_izq flecha_der'
+            ;
+            gap: 5px;
+            width: min-content;
+
+            .carousel-item {
+                grid-area: img;
+                justify-self: center;
+            }
+
+            .flechas-trofeos-izq {
+                grid-area: flecha_izq;
+                background-color: $fondo_elementos;
+            }
+
+            .flechas-trofeos-der {
+                grid-area: flecha_der;
+                background-color: $fondo_elementos;
+            }
+        }
     }
 
 
     /* Carusel Trofeos */
 
-    .carusel-trofeo{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .contenido-carusel{
-        display: grid;
-        grid-template-areas:'img img'
-                            'flecha_izq flecha_der'
-        ;
-        gap: 5px;
-        width: min-content;
-    }
-
-    .carousel-item{
-        grid-area: img;
-        justify-self: center;
-    }
-
-    .flechas-trofeos-izq{
-        grid-area: flecha_izq;
-        background-color: $fondo_elementos;
-    }
-
-    .flechas-trofeos-der{
-        grid-area: flecha_der;
-        background-color: $fondo_elementos;
-    }
     /* Fin Index */
 
     /* Contacto*/
-    .botone-contacto{
+    .botone-contacto {
         align-self: center;
     }
 
-    .input-mobile{
+    .input-mobile {
         display: block;
-    }
-    
-    .input-mobile::placeholder { 
-        color: $text_color_fondo_elementos; 
+
+        &::placeholder {
+            color: $text_color_fondo_elementos;
+        }
+
+        &:focus::placeholder {
+            color: rgba(42, 138, 109, 0.397);
+        }
     }
 
-    .input-mobile:focus::placeholder { 
-        color: rgba(42, 138, 109, 0.397); 
-    }
 }
