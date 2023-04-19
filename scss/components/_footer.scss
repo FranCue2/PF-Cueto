@@ -1,0 +1,55 @@
+.footer {
+    padding-top: 10px;
+    background-color: $fondo_elementos;
+    @include flex(column, auto, center, auto, 2px);
+
+    .footer-logo {
+        text-decoration: none;
+        color: $text_color_fondo_elementos;
+        font-size: 40px;
+        font-family: Impact;
+    }
+
+    .footer-lista {
+        list-style-type: none;
+        @include flex(row, space-evenly, auto, auto, 5px);
+        width: 100%;
+        padding: 0;
+
+        h4 {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            list-style: circle;
+            padding: 0;
+        }
+
+        div {
+            @include flex(column, auto, auto, auto, 0);
+            color: $text_color_fondo_elementos;
+            font-family: 'Golos Text';
+        }
+
+        a {
+            text-decoration: none;
+            color: $text_color_fondo_elementos;
+
+            &:hover {
+                color: $link_color;
+            }
+        }
+    }
+
+    .footer-legales {
+        color: rgb(98, 155, 138);
+        font-size: 70%;
+        font-family: 'Poppins';
+        font-weight: 300;
+    }
+}

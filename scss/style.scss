@@ -1,0 +1,21 @@
+//IMPORTS
+@import 'base/vars';
+@import 'base/reset';
+@import 'base/utilidades';
+
+//IMPORTS COMPONENTS
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/titulos';
+@import 'components/diseno-general';
+
+
+//IMPORTS LAYOUT
+@import 'layout/copas';
+@import 'layout/liga';
+@import 'layout/index';
+@import 'layout/contacto';
+@import 'layout/equipos/boca';
+@import 'layout/equipos/river';
+@import 'layout/equipos/equipo';
+@import 'layout/mediaqueries';

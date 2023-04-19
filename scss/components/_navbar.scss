@@ -1,0 +1,51 @@
+.navbar-mio{
+    @include flex(row,space-between,center,wrap,0);
+    background-color: $fondo_elementos;
+    padding: 0 5px;
+    height: 90px;
+
+    .nav-logo{
+        width: 80px;
+        height: 80px;
+        padding: 5px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .nav-lista{
+        @include flex(row,space-around,auto,auto,30px);
+
+        .dropdown-menu{
+            background-color: $fondo_elementos;
+        }
+
+        a{
+            color: $text_color_fondo_elementos;
+        
+            &:hover{
+                color: $link_color;
+                background-color: $fondo_elementos;
+            }
+        }
+
+        button{
+            background-color: $fondo_elementos;
+            border: none;
+            color: $text_color_fondo_elementos;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'Golos Text';
+        
+            &:focus, &:hover{
+                color: $link_color;
+                background-color: $fondo_elementos;
+            }
+        
+        }
+    }
+}
+

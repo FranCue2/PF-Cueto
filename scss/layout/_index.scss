@@ -1,0 +1,275 @@
+.contenido-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Portada*/
+.incio-portada {
+    background-image: url(../multimedia/cancha-desde-el-aire.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include flex(column, center, center, auto, 10px);
+    height: 600px;
+    border-bottom: 3px rgb(42, 58, 10) solid;
+
+    img {
+        height: 300px;
+    }
+
+    p {
+        font-family: 'Rubik';
+        font-size: 300%;
+        color: #c9c9c9;
+    }
+}
+
+
+/*Expositor de Partidos*/
+
+.proximo-partido-general {
+    @include flex(column, flex-end, auto, auto, 0);
+    height: fit-content;
+    width: 98%;
+    border: 2px rgb(0, 0, 0) solid;
+    background-color: $fondo_elementos;
+    color: $text_color_fondo_elementos;
+    margin: 10px 0;
+    padding-bottom: 0;
+    padding-top: 10px;
+
+
+    .proximo-partido-item {
+        display: none;
+        grid-template-areas: '.. .. .. .. ..'
+            'local local .. visitante visitante'
+            'local local vs visitante visitante'
+            'local local .. visitante visitante'
+            'data-local data-local boton data-visitante data-visitante'
+        ;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        height: 600px;
+        width: 100%;
+        border-top: 1px rgb(0, 0, 0) solid;
+        background-size: cover;
+
+        .proximo-partido-local {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            grid-area: local;
+        }
+
+        .proximo-partido-visitante {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            grid-area: visitante;
+        }
+
+        h3 {
+            font-size: 50px;
+            background-color: rgb(23, 23, 23);
+            color: $text_color_fondo_elementos;
+            border: 2px rgb(8, 8, 8) solid;
+            border-radius: 20px;
+            padding: 0 8px;
+        }
+
+        .vs {
+            color: rgb(104, 0, 0);
+            background-color: rgba(23, 23, 23, 0.295);
+            grid-area: vs;
+            display: grid;
+            grid-template-areas: 'v ..'
+                '.. s'
+            ;
+            border-radius: 100%;
+            height: fit-content;
+            width: fit-content;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .v {
+            align-self: self-end;
+            justify-self: self-end;
+            grid-area: v;
+            font-size: 100px;
+            font-family: 'Frank+Ruhl+Libre';
+            right: -20px;
+            bottom: -50px;
+            position: relative;
+        }
+
+        .s {
+            align-self: self-start;
+            justify-self: self-start;
+            grid-area: s;
+            font-size: 100px;
+            font-family: 'Frank+Ruhl+Libre';
+            left: -20px;
+            top: -50px;
+            position: relative;
+        }
+
+        .data-local {
+            grid-area: data-local;
+            background-color: rgb(23, 23, 23);
+            color: $text_color_fondo_elementos;
+            border: 2px rgb(8, 8, 8) solid;
+            border-bottom: none;
+            border-left: none;
+            display: flex;
+            flex-direction: column;
+            padding-left: 5px;
+
+            p {
+                margin: 0;
+            }
+
+            h4 {
+                margin: 0;
+            }
+
+            span {
+                color: rgb(255, 166, 0);
+            }
+        }
+
+
+        .data-visitante {
+            grid-area: data-visitante;
+            background-color: rgb(23, 23, 23);
+            color: $text_color_fondo_elementos;
+            border: 2px rgb(8, 8, 8) solid;
+            border-bottom: none;
+            border-right: none;
+            display: flex;
+            flex-direction: column;
+            padding-left: 5px;
+
+            p {
+                margin: 0;
+            }
+
+            h4 {
+                margin: 0;
+            }
+
+            span {
+                color: rgb(255, 166, 0);
+            }
+        }
+    }
+
+    .fondo-bombonera-dentro {
+        background-image: url(../multimedia/la-bombonera-adentro.jpg);
+    }
+
+    .fondo-bombonera {
+        background-image: url(../multimedia/bombonera.png);
+    }
+
+    .fondo-monumental {
+        background-image: url(../multimedia/monumental.jpg);
+    }
+
+    .carousel-item.active {
+        display: grid;
+    }
+}
+
+
+/*Inicio de Trofeos*/
+
+.trofeos {
+    @include flex(column, space-evenly, auto, auto, 0);
+    width: 90%;
+    padding: 10px 0;
+    background-color: rgb(74, 126, 146);
+    border: 4px rgb(46, 76, 88) solid;
+
+    h2 {
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+    }
+
+    .contenido-carusel {
+        @include flex(row, space-around, auto, auto, 0);
+
+        section {
+            margin: 0;
+        }
+    }
+
+    .fichas_trofeo {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border: 3px $fondo_elementos solid;
+        background-color: rgb(0, 139, 139);
+
+        img {
+            border-right: 3px $fondo_elementos solid;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 4px 10px;
+            font-weight: 900;
+            color: rgb(35, 114, 90);
+            width: 100%;
+        }
+
+        h3 {
+            width: 100%;
+            height: 100%;
+            font-family: 'Golos Text';
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            text-align: left;
+        }
+
+        section {
+            @include flex(column, space-between, auto, auto, 0);
+            width: 100%;
+            padding: 5px 10px;
+        }
+
+        p {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+        button {
+            align-self: flex-end;
+            width: fit-content;
+            border-radius: 20px;
+            border: 2px rgb(0, 0, 0) solid;
+            background-color: $fondo_elementos;
+            justify-self: flex-end;
+            margin-bottom: 10px;
+            margin-left: 6px;
+            padding: 2px 0;
+
+            &:hover {
+                -webkit-box-shadow: 6px 6px 31px -3px rgba(0, 0, 0, 0.78);
+                -moz-box-shadow: 6px 6px 31px -3px rgba(0, 0, 0, 0.78);
+                box-shadow: 6px 6px 31px -3px rgba(0, 0, 0, 0.78);
+                transition: 1s;
+                background-color: rgb(0, 212, 159);
+            }
+        }
+    }
+
+    .flechas-trofeos {
+        width: auto;
+        position: inherit;
+    }
+}
