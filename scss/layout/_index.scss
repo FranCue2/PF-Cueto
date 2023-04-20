@@ -6,7 +6,7 @@
 
 /*Portada*/
 .incio-portada {
-    background-image: url(../multimedia/cancha-desde-el-aire.jpg);
+    background-image: url(../multimedia/cancha-desde-el-aire.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -167,16 +167,12 @@
         }
     }
 
-    .fondo-bombonera-dentro {
-        background-image: url(../multimedia/la-bombonera-adentro.jpg);
-    }
-
     .fondo-bombonera {
-        background-image: url(../multimedia/bombonera.png);
+        background-image: url(../multimedia/bombonera.webp);
     }
 
     .fondo-monumental {
-        background-image: url(../multimedia/monumental.jpg);
+        background-image: url(../multimedia/monumental.webp);
     }
 
     .carousel-item.active {

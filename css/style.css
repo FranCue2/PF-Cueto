@@ -146,7 +146,7 @@ th {
 }
 
 .fondo-pasto {
-  background-image: url(../multimedia/pasto.jpg);
+  background-image: url(../multimedia/pasto.webp);
   background-attachment: fixed;
 }
 
@@ -751,7 +751,7 @@ th {
 
 /*Portada*/
 .incio-portada {
-  background-image: url(../multimedia/cancha-desde-el-aire.jpg);
+  background-image: url(../multimedia/cancha-desde-el-aire.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -894,14 +894,11 @@ th {
 .proximo-partido-general .proximo-partido-item .data-visitante span {
   color: rgb(255, 166, 0);
 }
-.proximo-partido-general .fondo-bombonera-dentro {
-  background-image: url(../multimedia/la-bombonera-adentro.jpg);
-}
 .proximo-partido-general .fondo-bombonera {
-  background-image: url(../multimedia/bombonera.png);
+  background-image: url(../multimedia/bombonera.webp);
 }
 .proximo-partido-general .fondo-monumental {
-  background-image: url(../multimedia/monumental.jpg);
+  background-image: url(../multimedia/monumental.webp);
 }
 .proximo-partido-general .carousel-item.active {
   display: grid;
@@ -1115,7 +1112,7 @@ form .botone-contacto button:hover {
   grid-template-rows: repeat(2, 45%);
   grid-template-areas: "logo nombre" "detalles detalles";
   background-color: rgba(23, 23, 23, 0.466);
-  background-image: url(../multimedia/bombonera.png);
+  background-image: url(../multimedia/bombonera.webp);
   background-size: cover;
   background-blend-mode: color;
   height: 400px;
@@ -1308,14 +1305,18 @@ form .botone-contacto button:hover {
 }
 
 .entrada_equipo_river {
-  background-image: url(../multimedia/monumental.jpg);
+  background-image: url(../multimedia/monumental.webp);
 }
 
 /*900px para carusel y proximo Partido*/
 @media (max-width: 900px) {
   /*General*/
+  .fondo-pasto {
+    background-image: none;
+  }
   .contenido {
     margin: 0;
+    border: none;
   }
   /* Index */
   /* Proximo Partido */
