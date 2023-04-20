@@ -1,3 +1,9 @@
+.titulo_footer_h4{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
 .footer {
     padding-top: 10px;
     background-color: $fondo_elementos;
@@ -15,11 +21,6 @@
         @include flex(row, space-evenly, auto, auto, 5px);
         width: 100%;
         padding: 0;
-
-        h4 {
-            font-weight: 600;
-            font-size: 20px;
-        }
 
         ul {
             padding-left: 20px;

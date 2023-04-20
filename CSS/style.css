@@ -69,6 +69,11 @@ th {
   background-color: rgb(23, 23, 23);
 }
 
+.titulo_footer_h4 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
 .footer {
   padding-top: 10px;
   background-color: rgb(23, 23, 23);
@@ -95,10 +100,6 @@ th {
   gap: 5px;
   width: 100%;
   padding: 0;
-}
-.footer .footer-lista h4 {
-  font-weight: 600;
-  font-size: 20px;
 }
 .footer .footer-lista ul {
   padding-left: 20px;
