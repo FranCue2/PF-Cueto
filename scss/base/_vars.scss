@@ -1,6 +1,12 @@
 // Color
 $fondo_elementos:rgb(23,23,23);
 
+$fondo_elementos_difuminado:rgba(23,23,23,0.5);
+
+$color-datos: rgb(255, 166, 0);
+
 $link_color:rgb(10, 88, 202);
 
 $text_color_fondo_elementos:rgb(42, 138, 109);
+
+$boca-color: linear-gradient(90deg,rgb(0, 0, 255),rgb(255, 230, 0),rgb(0, 0, 255))

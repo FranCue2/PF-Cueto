@@ -38,146 +38,145 @@
     margin: 10px 0;
     padding-bottom: 0;
     padding-top: 10px;
+}
 
+.proximo-partido-item {
+    display: none;
+    grid-template-areas: '.. .. .. .. ..'
+        'local local .. visitante visitante'
+        'local local vs visitante visitante'
+        'local local .. visitante visitante'
+        'data-local data-local boton data-visitante data-visitante'
+    ;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    height: 600px;
+    width: 100%;
+    border-top: 1px rgb(0, 0, 0) solid;
+    background-size: cover;
 
-    .proximo-partido-item {
-        display: none;
-        grid-template-areas: '.. .. .. .. ..'
-            'local local .. visitante visitante'
-            'local local vs visitante visitante'
-            'local local .. visitante visitante'
-            'data-local data-local boton data-visitante data-visitante'
-        ;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        height: 600px;
-        width: 100%;
-        border-top: 1px rgb(0, 0, 0) solid;
-        background-size: cover;
+    h3 {
+        font-size: 50px;
+        background-color: rgb(23, 23, 23);
+        color: $text_color_fondo_elementos;
+        border: 2px rgb(8, 8, 8) solid;
+        border-radius: 20px;
+        padding: 0 8px;
+    }
+}
 
-        .proximo-partido-local {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            grid-area: local;
-        }
+.proximo-partido-local {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    grid-area: local;
+}
 
-        .proximo-partido-visitante {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            grid-area: visitante;
-        }
+.proximo-partido-visitante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-area: visitante;
+}
+.vs {
+    color: rgb(104, 0, 0);
+    background-color: rgba(23, 23, 23, 0.295);
+    grid-area: vs;
+    display: grid;
+    grid-template-areas: 'v ..'
+        '.. s'
+    ;
+    border-radius: 100%;
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+}
 
-        h3 {
-            font-size: 50px;
-            background-color: rgb(23, 23, 23);
-            color: $text_color_fondo_elementos;
-            border: 2px rgb(8, 8, 8) solid;
-            border-radius: 20px;
-            padding: 0 8px;
-        }
+.v {
+    align-self: self-end;
+    justify-self: self-end;
+    grid-area: v;
+    font-size: 100px;
+    font-family: 'Frank+Ruhl+Libre';
+    right: -20px;
+    bottom: -50px;
+    position: relative;
+}
 
-        .vs {
-            color: rgb(104, 0, 0);
-            background-color: rgba(23, 23, 23, 0.295);
-            grid-area: vs;
-            display: grid;
-            grid-template-areas: 'v ..'
-                '.. s'
-            ;
-            border-radius: 100%;
-            height: fit-content;
-            width: fit-content;
-            align-self: center;
-            justify-self: center;
-        }
+.s {
+    align-self: self-start;
+    justify-self: self-start;
+    grid-area: s;
+    font-size: 100px;
+    font-family: 'Frank+Ruhl+Libre';
+    left: -20px;
+    top: -50px;
+    position: relative;
+}
 
-        .v {
-            align-self: self-end;
-            justify-self: self-end;
-            grid-area: v;
-            font-size: 100px;
-            font-family: 'Frank+Ruhl+Libre';
-            right: -20px;
-            bottom: -50px;
-            position: relative;
-        }
+.data-local {
+    grid-area: data-local;
+    background-color: rgb(23, 23, 23);
+    color: $text_color_fondo_elementos;
+    border: 2px rgb(8, 8, 8) solid;
+    border-bottom: none;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
 
-        .s {
-            align-self: self-start;
-            justify-self: self-start;
-            grid-area: s;
-            font-size: 100px;
-            font-family: 'Frank+Ruhl+Libre';
-            left: -20px;
-            top: -50px;
-            position: relative;
-        }
-
-        .data-local {
-            grid-area: data-local;
-            background-color: rgb(23, 23, 23);
-            color: $text_color_fondo_elementos;
-            border: 2px rgb(8, 8, 8) solid;
-            border-bottom: none;
-            border-left: none;
-            display: flex;
-            flex-direction: column;
-            padding-left: 5px;
-
-            p {
-                margin: 0;
-            }
-
-            h4 {
-                margin: 0;
-            }
-
-            span {
-                color: rgb(255, 166, 0);
-            }
-        }
-
-
-        .data-visitante {
-            grid-area: data-visitante;
-            background-color: rgb(23, 23, 23);
-            color: $text_color_fondo_elementos;
-            border: 2px rgb(8, 8, 8) solid;
-            border-bottom: none;
-            border-right: none;
-            display: flex;
-            flex-direction: column;
-            padding-left: 5px;
-
-            p {
-                margin: 0;
-            }
-
-            h4 {
-                margin: 0;
-            }
-
-            span {
-                color: rgb(255, 166, 0);
-            }
-        }
+    p {
+        margin: 0;
     }
 
-    .fondo-bombonera {
-        background-image: url(../multimedia/bombonera.webp);
+    h4 {
+        margin: 0;
     }
 
-    .fondo-monumental {
-        background-image: url(../multimedia/monumental.webp);
+    span {
+        color: $color-datos;
+    }
+}
+
+
+.data-visitante {
+    grid-area: data-visitante;
+    background-color: rgb(23, 23, 23);
+    color: $text_color_fondo_elementos;
+    border: 2px rgb(8, 8, 8) solid;
+    border-bottom: none;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+
+    p {
+        margin: 0;
     }
 
-    .carousel-item.active {
-        display: grid;
+    h4 {
+        margin: 0;
     }
+
+    span {
+        color: $color-datos;
+    }
+}
+
+
+.fondo-bombonera {
+    background-image: url(../multimedia/bombonera.webp);
+}
+
+.fondo-monumental {
+    background-image: url(../multimedia/monumental.webp);
+}
+
+.carousel-item.active {
+    display: grid;
 }
 
 

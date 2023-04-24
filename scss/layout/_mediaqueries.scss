@@ -211,30 +211,62 @@
 
     .proximo-partido-img-mobile {
         display: none;
-        background-image: url(../multimedia/varios/separador-celu.png);
+        background-image: linear-gradient(135deg,rgb(0, 0, 216),rgb(0,0,0),rgb(219, 0, 0));
         background-size: cover;
         background-position: center;
         flex-direction: column;
         justify-content: space-between;
-        gap: 320px;
-        padding: 35px 10px;
+        gap: 227px;
+        padding: 35px 1%;
 
         img {
-            max-width: 40%;
+            max-width: 30%;
         }
 
         .proximo-partido-local {
             align-self: flex-start;
-            display: flex;
-            justify-content: left;
-            padding-left: 10px;
+            @include flex(row,space-between,center,auto,0);
+            padding-right: 10px;
+            background-color: $fondo_elementos_difuminado;
+            border:2px rgb(0,0,0) solid;
+            height: fit min-content;
+            padding: 0;
+            width: 82%;
+            min-width: 264px;
         }
     
         .proximo-partido-visitante {
             align-self: flex-end;
-            display: flex;
-            justify-content: right;
+            @include flex(row,space-between,center,auto,0);
             padding-right: 10px;
+            background-color: $fondo_elementos_difuminado;
+            border:2px rgb(0,0,0) solid;
+            height: min-content;
+            padding: 0;
+            width: 82%;
+            min-width: 264px;
+        }
+
+        .data-local{
+            background: none;
+            border-top: none;
+            border-right: none;
+            border-left: 2px rgb(0, 0, 0) solid;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            text-align: center;
+        }
+
+        .data-visitante{
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: 2px rgb(0, 0, 0) solid;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            text-align: center;
         }
     }
 
@@ -279,6 +311,48 @@
     /* Carusel Trofeos */
 
     /* Fin Index */
+
+    // Inicio de Equipo
+
+    .fondo-equipo-entrada{
+        background-position: center;
+    }
+
+    .contenido-equipo{
+        padding-top: 0;
+    }
+
+    .entrada_equipo{
+        width: 100%;
+        img{
+            width: 75px;
+        }
+
+        h1{
+            font-size: 37px;
+            width: auto;
+        }
+    }
+
+    .parte-equipo{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabla-liga-equipo{
+        min-width: 0px;
+        width: fit-content;
+        padding: 0;
+    }
+    .sub-grupo-rival-ultimo{
+        min-width: 0px;
+        width: 100%;
+        padding: 0 5px;
+    }
+
+
+
 
     /* Contacto*/
     .botone-contacto {

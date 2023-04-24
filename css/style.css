@@ -790,7 +790,8 @@ th {
   padding-bottom: 0;
   padding-top: 10px;
 }
-.proximo-partido-general .proximo-partido-item {
+
+.proximo-partido-item {
   display: none;
   grid-template-areas: ".. .. .. .. .." "local local .. visitante visitante" "local local vs visitante visitante" "local local .. visitante visitante" "data-local data-local boton data-visitante data-visitante";
   grid-template-columns: 20% 20% 20% 20% 20%;
@@ -799,22 +800,7 @@ th {
   border-top: 1px rgb(0, 0, 0) solid;
   background-size: cover;
 }
-.proximo-partido-general .proximo-partido-item .proximo-partido-local {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  grid-area: local;
-}
-.proximo-partido-general .proximo-partido-item .proximo-partido-visitante {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  grid-area: visitante;
-}
-.proximo-partido-general .proximo-partido-item h3 {
+.proximo-partido-item h3 {
   font-size: 50px;
   background-color: rgb(23, 23, 23);
   color: rgb(42, 138, 109);
@@ -822,7 +808,25 @@ th {
   border-radius: 20px;
   padding: 0 8px;
 }
-.proximo-partido-general .proximo-partido-item .vs {
+
+.proximo-partido-local {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  grid-area: local;
+}
+
+.proximo-partido-visitante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: visitante;
+}
+
+.vs {
   color: rgb(104, 0, 0);
   background-color: rgba(23, 23, 23, 0.295);
   grid-area: vs;
@@ -834,7 +838,8 @@ th {
   align-self: center;
   justify-self: center;
 }
-.proximo-partido-general .proximo-partido-item .v {
+
+.v {
   align-self: self-end;
   justify-self: self-end;
   grid-area: v;
@@ -844,7 +849,8 @@ th {
   bottom: -50px;
   position: relative;
 }
-.proximo-partido-general .proximo-partido-item .s {
+
+.s {
   align-self: self-start;
   justify-self: self-start;
   grid-area: s;
@@ -854,7 +860,8 @@ th {
   top: -50px;
   position: relative;
 }
-.proximo-partido-general .proximo-partido-item .data-local {
+
+.data-local {
   grid-area: data-local;
   background-color: rgb(23, 23, 23);
   color: rgb(42, 138, 109);
@@ -865,16 +872,17 @@ th {
   flex-direction: column;
   padding-left: 5px;
 }
-.proximo-partido-general .proximo-partido-item .data-local p {
+.data-local p {
   margin: 0;
 }
-.proximo-partido-general .proximo-partido-item .data-local h4 {
+.data-local h4 {
   margin: 0;
 }
-.proximo-partido-general .proximo-partido-item .data-local span {
+.data-local span {
   color: rgb(255, 166, 0);
 }
-.proximo-partido-general .proximo-partido-item .data-visitante {
+
+.data-visitante {
   grid-area: data-visitante;
   background-color: rgb(23, 23, 23);
   color: rgb(42, 138, 109);
@@ -885,22 +893,25 @@ th {
   flex-direction: column;
   padding-left: 5px;
 }
-.proximo-partido-general .proximo-partido-item .data-visitante p {
+.data-visitante p {
   margin: 0;
 }
-.proximo-partido-general .proximo-partido-item .data-visitante h4 {
+.data-visitante h4 {
   margin: 0;
 }
-.proximo-partido-general .proximo-partido-item .data-visitante span {
+.data-visitante span {
   color: rgb(255, 166, 0);
 }
-.proximo-partido-general .fondo-bombonera {
+
+.fondo-bombonera {
   background-image: url(../multimedia/bombonera.webp);
 }
-.proximo-partido-general .fondo-monumental {
+
+.fondo-monumental {
   background-image: url(../multimedia/monumental.webp);
 }
-.proximo-partido-general .carousel-item.active {
+
+.carousel-item.active {
   display: grid;
 }
 
@@ -1096,39 +1107,69 @@ form .botone-contacto button:hover {
 }
 
 .contenido-equipo {
-  display: grid;
-  padding: 20px 5px;
-  justify-content: space-around;
-  grid-template-columns: 56.45px 225.8px 225.8px 112.9px 225.8px 225.8px 56.45px;
-  grid-template-rows: auto;
-  grid-template-areas: "entrada_equipo entrada_equipo entrada_equipo entrada_equipo calendario calendario .." ".. tabla_liga tabla_liga .. rival_historico rival_historico .." ".. tabla_liga tabla_liga .. ultimo_plantel ultimo_plantel .." ".. tabla_liga tabla_liga .. ultimo_plantel ultimo_plantel .." ".. campeones_nacionales campeones_nacionales .. campeones_internacionales campeones_internacionales .." ".. campeones_nacionales campeones_nacionales .. campeones_internacionales campeones_internacionales ..";
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  flex-wrap: auto;
+  gap: 10px;
+  padding: 20px 0;
 }
 
 /*Portada Equipo*/
+.parte-equipo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fondo-bombonera-equipo {
+  background-image: url(../multimedia/bombonera.webp);
+}
+
+.fondo-equipo-entrada {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .entrada_equipo {
-  grid-area: entrada_equipo;
   display: grid;
-  grid-template-columns: 127px 480px;
   grid-template-rows: repeat(2, 45%);
   grid-template-areas: "logo nombre" "detalles detalles";
-  background-color: rgba(23, 23, 23, 0.466);
-  background-image: url(../multimedia/bombonera.webp);
+  background-image: linear-gradient(135deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0));
   background-size: cover;
   background-blend-mode: color;
-  height: 400px;
+  height: max-content;
   gap: 20px;
   border: 2px rgb(0, 0, 0) solid;
   padding: 10px;
+  width: min-content;
 }
 .entrada_equipo img {
-  height: 150px;
+  width: 120px;
 }
 .entrada_equipo h1 {
+  background-image: linear-gradient(90deg, rgb(0, 0, 255), rgb(255, 230, 0), rgb(0, 0, 255));
   color: rgb(235, 235, 235);
   text-align: left;
+  width: 316px;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .entrada_equipo p {
-  color: rgb(201, 201, 201);
+  background-color: rgba(23, 23, 23, 0.616);
+  color: rgb(42, 138, 109);
+  width: fit-content;
+  border: 2px rgb(0, 0, 0) solid;
+  height: fit-content;
+}
+.entrada_equipo span {
+  color: rgb(255, 166, 0);
 }
 
 .entrada_cancha {
@@ -1156,9 +1197,13 @@ form .botone-contacto button:hover {
 
 /*Calendario*/
 .calendario {
-  grid-area: calendario;
   align-self: center;
   justify-self: center;
+}
+.calendario table {
+  border-collapse: collapse;
+  border: 2px rgb(0, 0, 0) solid;
+  width: 20%;
 }
 
 .otro-mes {
@@ -1200,19 +1245,18 @@ form .botone-contacto button:hover {
   font-family: "Golos Text";
 }
 
-.calendario table {
-  border-collapse: collapse;
-  border: 2px rgb(0, 0, 0) solid;
-  width: 400px;
-  height: 250px;
+.sub-grupo-rival-ultimo {
+  width: 45%;
+  min-width: 410px;
 }
 
 /*Tabla Liga Equipo*/
 .tabla-liga-equipo {
-  grid-area: tabla_liga;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  width: 45%;
+  min-width: 410px;
 }
 
 .equipo-en-tabla td {
@@ -1221,7 +1265,7 @@ form .botone-contacto button:hover {
 
 /*Rival Historico*/
 .rival-historico {
-  grid-area: rival_historico;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -1237,7 +1281,6 @@ form .botone-contacto button:hover {
 
 /*Ultimo Plantel*/
 .ultimo-plantel {
-  grid-area: ultimo_plantel;
   padding-top: 10px;
 }
 .ultimo-plantel h2 {
@@ -1252,20 +1295,12 @@ form .botone-contacto button:hover {
 }
 
 /*Tablas Torneos*/
-.ranking-de-campeonatos-nacionales-equipo {
-  grid-area: campeones_nacionales;
-  padding-top: 10px;
-}
-
-.ranking-de-campeonatos-internacional-equipo {
-  grid-area: campeones_internacionales;
-  padding-top: 10px;
-}
-
 .ranking-de-campeonatos-equipo {
+  padding: 0 5px;
   width: 100%;
 }
 .ranking-de-campeonatos-equipo table {
+  width: 100%;
   border-collapse: collapse;
   border: 3px rgb(0, 0, 0) solid;
 }
@@ -1455,28 +1490,68 @@ form .botone-contacto button:hover {
   }
   .proximo-partido-img-mobile {
     display: none;
-    background-image: url(../multimedia/varios/separador-celu.png);
+    background-image: linear-gradient(135deg, rgb(0, 0, 216), rgb(0, 0, 0), rgb(219, 0, 0));
     background-size: cover;
     background-position: center;
     flex-direction: column;
     justify-content: space-between;
-    gap: 320px;
-    padding: 35px 10px;
+    gap: 227px;
+    padding: 35px 1%;
   }
   .proximo-partido-img-mobile img {
-    max-width: 40%;
+    max-width: 30%;
   }
   .proximo-partido-img-mobile .proximo-partido-local {
     align-self: flex-start;
     display: flex;
-    justify-content: left;
-    padding-left: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: auto;
+    gap: 0;
+    padding-right: 10px;
+    background-color: rgba(23, 23, 23, 0.5);
+    border: 2px rgb(0, 0, 0) solid;
+    height: fit min-content;
+    padding: 0;
+    width: 82%;
+    min-width: 264px;
   }
   .proximo-partido-img-mobile .proximo-partido-visitante {
     align-self: flex-end;
     display: flex;
-    justify-content: right;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: auto;
+    gap: 0;
     padding-right: 10px;
+    background-color: rgba(23, 23, 23, 0.5);
+    border: 2px rgb(0, 0, 0) solid;
+    height: min-content;
+    padding: 0;
+    width: 82%;
+    min-width: 264px;
+  }
+  .proximo-partido-img-mobile .data-local {
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: 2px rgb(0, 0, 0) solid;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .proximo-partido-img-mobile .data-visitante {
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: 2px rgb(0, 0, 0) solid;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: center;
   }
   /* Trofeos */
   .trofeos {
@@ -1508,6 +1583,37 @@ form .botone-contacto button:hover {
   }
   /* Carusel Trofeos */
   /* Fin Index */
+  .fondo-equipo-entrada {
+    background-position: center;
+  }
+  .contenido-equipo {
+    padding-top: 0;
+  }
+  .entrada_equipo {
+    width: 100%;
+  }
+  .entrada_equipo img {
+    width: 75px;
+  }
+  .entrada_equipo h1 {
+    font-size: 37px;
+    width: auto;
+  }
+  .parte-equipo {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabla-liga-equipo {
+    min-width: 0px;
+    width: fit-content;
+    padding: 0;
+  }
+  .sub-grupo-rival-ultimo {
+    min-width: 0px;
+    width: 100%;
+    padding: 0 5px;
+  }
   /* Contacto*/
   .botone-contacto {
     align-self: center;

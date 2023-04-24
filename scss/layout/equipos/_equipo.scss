@@ -1,47 +1,63 @@
 .contenido-equipo{
-    display: grid;
-    padding: 20px 5px;
-    justify-content: space-around;
-    grid-template-columns: 56.45px 225.8px 225.8px 112.9px 225.8px 225.8px 56.45px;
-    grid-template-rows: auto;
-    grid-template-areas:'entrada_equipo entrada_equipo entrada_equipo entrada_equipo calendario calendario ..'
-                        '.. tabla_liga tabla_liga .. rival_historico rival_historico ..'
-                        '.. tabla_liga tabla_liga .. ultimo_plantel ultimo_plantel ..'
-                        '.. tabla_liga tabla_liga .. ultimo_plantel ultimo_plantel ..'
-                        '.. campeones_nacionales campeones_nacionales .. campeones_internacionales campeones_internacionales ..'
-                        '.. campeones_nacionales campeones_nacionales .. campeones_internacionales campeones_internacionales ..'
-    ;
+    @include flex(column, auto, auto, auto, 10px);
+    padding: 20px 0;
 }
 
 /*Portada Equipo*/
+.parte-equipo{
+    @include flex(row, space-around, auto, wrap, 10px);
+}
+
+.fondo-bombonera-equipo{
+    background-image: url(../multimedia/bombonera.webp);
+}
+
+.fondo-equipo-entrada{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .entrada_equipo{
-    grid-area: entrada_equipo;
     display: grid;
-    grid-template-columns: 127px 480px;
     grid-template-rows: repeat(2,45%);
     grid-template-areas:'logo nombre'
                         'detalles detalles'
                         ;
-    background-color: rgba(23, 23, 23, 0.466);
-    background-image: url(../multimedia/bombonera.webp);
+                        background-image: linear-gradient(45deg+90deg,rgb(0,0,0), rgba(0, 0, 0, 0.678), rgba(0,0,0,0));
     background-size: cover;
     background-blend-mode: color;
-    height: 400px;
+    height: max-content;
     gap: 20px;
     border: 2px rgb(0, 0, 0) solid;
     padding: 10px;
+    width: min-content;
+
 
     img{
-        height: 150px;
+        width: 120px;
     }
 
     h1{
+        background-image: $boca-color;
         color: rgb(235, 235, 235);
         text-align: left;
+        width: 316px;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
     
     p{
-        color: rgb(201, 201, 201);
+        background-color: rgba(23, 23, 23, 0.616);
+        color: $text_color_fondo_elementos;
+        width: fit-content;
+        border: 2px rgb(0, 0, 0) solid;
+        height: fit-content;
+    }
+
+    span{
+        color: $color-datos;
     }
 }
 
@@ -71,9 +87,15 @@
 /*Calendario*/
 
 .calendario{
-    grid-area: calendario;
     align-self: center;
     justify-self: center;
+
+    table{
+        border-collapse: collapse;
+        border: 2px rgb(0, 0, 0) solid;
+        width: 20%;
+        // height: 250px;
+    }
 }
 
 .otro-mes{
@@ -115,21 +137,21 @@
     font-family: 'Golos Text';
 }
 
-.calendario table{
-    border-collapse: collapse;
-    border: 2px rgb(0, 0, 0) solid;
-    width: 400px;
-    height: 250px;
+
+.sub-grupo-rival-ultimo{
+    width: 45%;
+    min-width: 410px;
 }
 
 
 /*Tabla Liga Equipo*/
 
 .tabla-liga-equipo{
-    grid-area: tabla_liga;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    width: 45%;
+    min-width: 410px;
 }
 
 
@@ -143,7 +165,7 @@
 /*Rival Historico*/
 
 .rival-historico{
-    grid-area: rival_historico;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -161,7 +183,6 @@
 /*Ultimo Plantel*/
 
 .ultimo-plantel{
-    grid-area: ultimo_plantel;
     padding-top: 10px;
 
     h2{
@@ -180,19 +201,11 @@
 
 /*Tablas Torneos*/
 
-.ranking-de-campeonatos-nacionales-equipo{
-    grid-area: campeones_nacionales;
-    padding-top: 10px;
-}
-
-.ranking-de-campeonatos-internacional-equipo{
-    grid-area: campeones_internacionales;
-    padding-top: 10px;
-}
-
 .ranking-de-campeonatos-equipo{
+    padding: 0 5px;
     width: 100%;
     table{
+        width: 100%;
         border-collapse: collapse;
         border: 3px rgb(0, 0, 0) solid;
 
