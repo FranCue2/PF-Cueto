@@ -1,257 +1,272 @@
 .contenido-liga {
-    display: grid;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: auto;
-    justify-content: space-around;
-    grid-template-areas: 'titulo titulo'
-        'tabla fechas'
-        'ranking ranking'
-    ;
-    padding: 10px;
-    gap: 5px;
-    row-gap: 20px;
+    @include flex(column, auto, auto, auto, 20px);
+    margin: 0;
 }
-    .titulo-liga {
-        grid-area: titulo;
-        padding-bottom: 5px;
+
+.titulo-liga {
+    padding-bottom: 5px;
+}
+
+.parte-liga{
+    @include flex(row, space-around, auto, wrap, 5px);
+
+    .tabla-liga{
+        width: 45%;
+        min-width: 420px;
+    }
+}
+
+/*Estilo de Tabla*/
+
+.tabla-liga {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        background-color: $fondo_elementos;
+        color: $text_color_fondo_elementos;
     }
 
-    /*Estilo de Tabla*/
+    table {
+        display: inline-block;
+        position: relative;
+        table-layout: auto;
+        border-collapse: collapse;
+        border: 3px solid rgb(0, 0, 0);
+        width: fit-content;
+    }
 
-    .tabla-liga {
-        display: flex;
-        flex-direction: column;
-        grid-area: tabla;
-        width: 100%;
+    .campeon-de-liga {
+        background-color: rgba(20, 211, 20, 0.50);
+    }
 
-        h2 {
-            background-color: $fondo_elementos;
-            color: $text_color_fondo_elementos;
-        }
+    .clasificado-a-libertadores {
+        background-color: rgba(20, 211, 20);
+    }
 
-        table {
-            display: inline-block;
-            position: relative;
-            table-layout: auto;
-            border-collapse: collapse;
-            border: 3px solid rgb(0, 0, 0);
-            width: fit-content;
-        }
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: rgba(255, 255, 255, 0.788);
+            }
 
-        .campeon-de-liga {
-            background-color: rgba(20, 211, 20, 0.50);
-        }
-
-        .clasificado-a-libertadores {
-            background-color: rgba(20, 211, 20);
-        }
-
-        tbody {
-            tr {
-                &:nth-child(odd) {
-                    background-color: rgba(255, 255, 255, 0.788);
-                }
-
-                &:nth-child(even) {
-                    background-color: rgb(204, 204, 204);
-                }
+            &:nth-child(even) {
+                background-color: rgb(204, 204, 204);
             }
         }
-
-        .columna-equipo {
-            width: 60%;
-        }
-
-        .tabla-equipo {
-            font-weight: 600;
-            text-align: left;
-            padding-left: 5px;
-        }
-
-        img {
-            height: 18px;
-        }
-
-        .tabla-puntaje {
-            font-weight: 650;
-        }
-
-        .tabla-end {
-            border: 2px solid rgb(0, 0, 0);
-            border-right: 1px solid rgb(0, 0, 0);
-            background-color: $fondo_elementos;
-            font-family: 'Golos Text';
-            color: $text_color_fondo_elementos;
-        }
     }
 
-    .tabla-start {
-        border-left: 1px solid rgb(0, 0, 0);
+    .columna-equipo {
+        width: 60%;
     }
 
-    .fecha {
-        display: flex;
-        flex-direction: column;
-        grid-area: fechas;
-        border: 3px rgb(0, 0, 0) solid;
-
-        h2 {
-            background-color: $fondo_elementos;
-            color: $text_color_fondo_elementos;
-            width: 100%;
-            margin: 0;
-        }
-
-        ol {
-            display: flex;
-            border-top: 3px rgb(0, 0, 0) solid;
-            border-bottom: 3px rgb(0, 0, 0) solid;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            list-style: none;
-            background-color: $fondo_elementos;
-            color: $text_color_fondo_elementos;
-            border-left: 1px rgb(0, 0, 0) solid;
-            width: 3.703%;
-            text-align: center;
-        }
+    .tabla-equipo {
+        font-weight: 600;
+        text-align: left;
+        padding-left: 5px;
     }
 
-    .tabla-fechas {
-        table {
-            border-collapse: collapse;
-            border-top: none;
-            width: 100%;
-        }
-
-        th {
-            background-color: $fondo_elementos;
-            font-family: 'Golos Text';
-            color: $text_color_fondo_elementos;
-            text-align: center;
-            padding: 0 3px;
-        }
-
-        td {
-            text-align: center;
-            font-family: Arial;
-            padding: 0 12px;
-            border: 1px $fondo_elementos solid;
-        }
+    img {
+        height: 18px;
     }
 
-    .fecha-de-partido {
+    .tabla-puntaje {
+        font-weight: 650;
+    }
+
+    .tabla-end {
+        border: 2px solid rgb(0, 0, 0);
+        border-right: 1px solid rgb(0, 0, 0);
         background-color: $fondo_elementos;
         font-family: 'Golos Text';
         color: $text_color_fondo_elementos;
+    }
+}
+
+.tabla-start {
+    border-left: 1px solid rgb(0, 0, 0);
+}
+
+.fecha {
+    width: 45%;
+    min-width: 420px;
+    display: flex;
+    flex-direction: column;
+    border: 3px rgb(0, 0, 0) solid;
+
+    h2 {
+        background-color: $fondo_elementos;
+        color: $text_color_fondo_elementos;
+        width: 100%;
+        margin: 0;
+    }
+
+    ol {
+        display: flex;
         border-top: 3px rgb(0, 0, 0) solid;
         border-bottom: 3px rgb(0, 0, 0) solid;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    li {
+        list-style: none;
+        background-color: $fondo_elementos;
+        color: $text_color_fondo_elementos;
         border-left: 1px rgb(0, 0, 0) solid;
-        border-right: 1px rgb(0, 0, 0) solid;
-        font-weight: 500;
-    }
+        width: 6%;
+        text-align: center;
 
-    .fecha-quienes-goles {
-        width: 50%;
-        background-color: rgba(255, 255, 255, 0.788);
-
-        p {
-            margin: 0;
-        }
-
-        span {
-            color: rgb(18, 112, 49);
-            font-weight: 600;
-        }
-
-        td {
-            text-align: left;
+        &:hover{
+            transition: 0.25s;
+            background-color: $color-datos;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
         }
     }
 
-    .tabla-indices{
-        border: 2px solid rgb(0, 0, 0);
+    .flecha-fecha{
+        width: 10%;
+        font-weight: 900;
+    }
+}
+
+.num-fuera-rango{
+    display: none;
+}
+
+.tabla-fechas {
+    table {
+        border-collapse: collapse;
+        border-top: none;
+        width: 100%;
+    }
+
+    th {
         background-color: $fondo_elementos;
         font-family: 'Golos Text';
         color: $text_color_fondo_elementos;
-        border-left: none;
-    }
-
-    .tabla-datos {
-        border: 1px solid rgba(39, 39, 39, 0.774);
-        font-family: Arial;
         text-align: center;
-        width: 33px;
-        border-left: none;
+        padding: 0 3px;
     }
 
-    .fecha-terminado {
-        background-color: rgb(158, 158, 158);
+    td {
+        text-align: center;
+        font-family: Arial;
+        padding: 0 12px;
+        border: 1px $fondo_elementos solid;
+    }
+}
+
+.fecha-de-partido {
+    background-color: $fondo_elementos;
+    font-family: 'Golos Text';
+    color: $text_color_fondo_elementos;
+    border-top: 3px rgb(0, 0, 0) solid;
+    border-bottom: 3px rgb(0, 0, 0) solid;
+    border-left: 1px rgb(0, 0, 0) solid;
+    border-right: 1px rgb(0, 0, 0) solid;
+    font-weight: 500;
+}
+
+.fecha-quienes-goles {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.788);
+
+    p {
+        margin: 0;
     }
 
-    .fecha-en-progreso {
-        background-color: rgba(236, 0, 0, 0.877);
-    }
-
-    .fecha-por-definirse {
-        background-color: rgba(0, 121, 0, 0.815);
-    }
-
-    .fecha-hora {
-        background-color: rgba(255, 255, 255, 0.788);
-    }
-
-    .equipo-fecha {
-        background-color: rgb(23, 75, 59);
+    span {
+        color: rgb(18, 112, 49);
         font-weight: 600;
-        color: rgb(0, 0, 0);
     }
 
-    .borde-de {
-        border-right: 3px rgb(0, 0, 0) solid;
+    td {
+        text-align: left;
+    }
+}
+
+.tabla-indices {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: $fondo_elementos;
+    font-family: 'Golos Text';
+    color: $text_color_fondo_elementos;
+    border-left: none;
+}
+
+.tabla-datos {
+    border: 1px solid rgba(39, 39, 39, 0.774);
+    font-family: Arial;
+    text-align: center;
+    width: 33px;
+    border-left: none;
+}
+
+.fecha-terminado {
+    background-color: rgb(158, 158, 158);
+}
+
+.fecha-en-progreso {
+    background-color: rgba(236, 0, 0, 0.877);
+}
+
+.fecha-por-definirse {
+    background-color: rgba(0, 121, 0, 0.815);
+}
+
+.fecha-hora {
+    background-color: rgba(255, 255, 255, 0.788);
+}
+
+.equipo-fecha {
+    background-color: rgb(23, 75, 59);
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+.borde-de {
+    border-right: 3px rgb(0, 0, 0) solid;
+}
+
+.borde-iz {
+    border-left: 3px rgb(0, 0, 0) solid;
+}
+
+.tabla-end-liga {
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+/*Ranking*/
+
+.ranking {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        background-color: $fondo_elementos;
+        color: $text_color_fondo_elementos;
     }
 
-    .borde-iz {
-        border-left: 3px rgb(0, 0, 0) solid;
+    table {
+        table-layout: auto;
+        width: 100%;
+        border-collapse: collapse;
+        border: 3px solid rgb(0, 0, 0);
     }
+}
 
-    .tabla-end-liga {
-        border-right: 1px solid rgb(0, 0, 0);
-    }
+.tabla-ranking {
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: rgba(255, 255, 255, 0.788);
+            }
 
-    /*Ranking*/
-
-    .ranking {
-        grid-area: ranking;
-        display: flex;
-        flex-direction: column;
-
-        h2 {
-            background-color: $fondo_elementos;
-            color: $text_color_fondo_elementos;
-        }
-
-        table {
-            table-layout: auto;
-            width: 100%;
-            border-collapse: collapse;
-            border: 3px solid rgb(0, 0, 0);
-        }
-    }
-
-    .tabla-ranking {
-        tbody {
-            tr {
-                &:nth-child(odd) {
-                    background-color: rgba(255, 255, 255, 0.788);
-                }
-
-                &:nth-child(even) {
-                    background-color: rgb(204, 204, 204);
-                }
+            &:nth-child(even) {
+                background-color: rgb(204, 204, 204);
             }
         }
     }
+}
