@@ -1,5 +1,6 @@
 .contenido-equipo {
     margin: 0;
+    border: none;
 }
 
 /*Partido*/
@@ -105,9 +106,8 @@
     border-collapse: collapse;
     table-layout: auto;
     width: 100%;
-    border: 4px rgb(0, 0, 0) solid;
 
-    h2 {
+    h3 {
         font-size: 23px;
         font-family: 'Rubik';
         text-align: center;
@@ -137,17 +137,23 @@
 }
 
 .partido-lista {
-    width: 100%;
-
     table {
         table-layout: auto;
         border-collapse: collapse;
-        width: fit-content;
+        width: 100%;
+    }
+
+    span{
+        text-align: center;
+    }
+
+    tr{
+        height: 25px;
     }
 }
 
 .partido-equipo-lista-nombre {
-    width: 40%;
+    width: 40%-10%;
     p{
         margin: 0;
     }
@@ -161,6 +167,7 @@
     background-color: rgb(212, 212, 212);
     padding: 5px;
     font-family: 'Rubik';
+    text-align: center;
 
     img {
         width: 35px;
@@ -178,6 +185,7 @@
     border: 1px rgb(0, 0, 0) solid;
     padding: 0 5px;
     border-top: none;
+    width: 20px;
 }
 
 .partido-penales-lista {
@@ -214,18 +222,21 @@
 
 /*Liguillas*/
 
+.titulo-liguilla{
+    border-right: 1px rgb(0,0,0) solid;
+    background-color: $fondo_elementos;
+    color: $text_color_fondo_elementos
+}
+
 .liguillas {
     display: flex;
     justify-content: space-around;
-    gap: 10px;
 
     section {
-        width: auto;
+        width: 40%;
+        min-width: 350px;
     }
-}
 
-.titulo-liguilla {
-    border: 1px rgb(0, 0, 0) solid;
 }
 
 /*Torneo*/
@@ -281,18 +292,19 @@
 }
 
 .tabla-de-partidos-copa-de-la-liga {
-    width: fit-content;
+    width: 100%;
     align-self: center;
 
     table {
         border-collapse: collapse;
+        width: 100%;
     }
 
     tr {
         border: 1px rgb(0, 0, 0) solid;
     }
 
-    h2 {
+    h3 {
         font-size: 23px;
         font-family: 'Rubik';
         text-align: center;
@@ -304,6 +316,7 @@
         border: 1px rgb(0, 0, 0) solid;
         background-color: $fondo_elementos;
         color: $text_color_fondo_elementos;
+        width: 25%;
     }
 }
 

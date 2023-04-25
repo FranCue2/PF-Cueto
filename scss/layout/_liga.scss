@@ -1,6 +1,7 @@
 .contenido-liga {
     @include flex(column, auto, auto, auto, 20px);
     margin: 0;
+    border: none;
 }
 
 .titulo-liga {
@@ -80,6 +81,10 @@
         background-color: $fondo_elementos;
         font-family: 'Golos Text';
         color: $text_color_fondo_elementos;
+    }
+
+    span{
+        margin: 0;
     }
 }
 
