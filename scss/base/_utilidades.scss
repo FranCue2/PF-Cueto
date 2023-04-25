@@ -2,6 +2,10 @@
     display: none;
 }
 
+.menos-de-900px{
+    display: none;
+}
+
 @mixin flex($direction,$justify,$align,$wrap,$gap){
     display: flex;
     flex-direction: $direction;

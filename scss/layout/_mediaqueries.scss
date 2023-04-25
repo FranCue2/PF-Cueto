@@ -1,3 +1,10 @@
+@media (max-width: 1070px) {
+    .bloque-de-4-copa-liga{
+        display: none;
+    }
+}
+
+
 /*900px para carusel y proximo Partido*/
 
 @media (max-width: 900px) {
@@ -8,12 +15,18 @@
         background-image: none;
     }
 
+    .menos-de-900px{
+        display: block;
+    }
+
     .contenido {
         margin: 0;
         border: none;
     }
 
-
+    .mas-de-900px{
+        display: none;
+    }
     /* Index */
 
 
@@ -94,6 +107,18 @@
 
     ::after {
         display: none;
+    }
+}
+
+@media (max-width: 793px) {
+
+    .bloque-de-2-copa-liga{
+        display: none;
+    }
+
+    .liguillas{
+        flex-wrap: wrap;
+        gap: 10px;
     }
 }
 
@@ -381,10 +406,15 @@
         }
     }
 
+    /*copas*/
 
+    .otras-copas-copas {
+        @include flex(column, auto, center, auto, 10px);
+    }
 
-
-
+    .copa-de-campeones{
+        padding: 0;
+    }
 
     /* Contacto*/
     .botone-contacto {

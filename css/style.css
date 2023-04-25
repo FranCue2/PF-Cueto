@@ -17,6 +17,10 @@ th {
   display: none;
 }
 
+.menos-de-900px {
+  display: none;
+}
+
 .navbar-mio {
   display: flex;
   flex-direction: row;
@@ -84,13 +88,22 @@ th {
   flex-wrap: auto;
   gap: 2px;
 }
-.footer .footer-logo {
+
+.footer-legales {
+  color: rgb(98, 155, 138);
+  font-size: 70%;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+.footer-logo {
   text-decoration: none;
   color: rgb(42, 138, 109);
   font-size: 40px;
   font-family: Impact;
 }
-.footer .footer-lista {
+
+.footer-lista {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -101,14 +114,14 @@ th {
   width: 100%;
   padding: 0;
 }
-.footer .footer-lista ul {
+.footer-lista ul {
   padding-left: 20px;
 }
-.footer .footer-lista li {
+.footer-lista li {
   list-style: circle;
   padding: 0;
 }
-.footer .footer-lista div {
+.footer-lista div {
   display: flex;
   flex-direction: column;
   justify-content: auto;
@@ -118,18 +131,12 @@ th {
   color: rgb(42, 138, 109);
   font-family: "Golos Text";
 }
-.footer .footer-lista a {
+.footer-lista a {
   text-decoration: none;
   color: rgb(42, 138, 109);
 }
-.footer .footer-lista a:hover {
+.footer-lista a:hover {
   color: rgb(10, 88, 202);
-}
-.footer .footer-legales {
-  color: rgb(98, 155, 138);
-  font-size: 70%;
-  font-family: "Poppins";
-  font-weight: 300;
 }
 
 .titulos h1 {
@@ -155,6 +162,10 @@ th {
   border-right: 3px rgb(42, 58, 10) solid;
   border-left: 3px rgb(42, 58, 10) solid;
   margin: 0 50px;
+}
+
+.contenido-equipo {
+  margin: 0;
 }
 
 /*Partido*/
@@ -192,26 +203,6 @@ th {
   font-family: "Rubik";
 }
 
-.partido-final-copa-arg table {
-  border-collapse: collapse;
-  border: 1px rgb(0, 0, 0) solid;
-  height: 200px;
-  width: 350px;
-}
-.partido-final-copa-arg td {
-  text-align: center;
-}
-.partido-final-copa-arg img {
-  display: inline-block;
-  height: 100px;
-}
-.partido-final-copa-arg span {
-  display: inline-block;
-  width: 30px;
-  font-size: 40px;
-  font-family: "Golos Text";
-}
-
 .partido-final-puntaje {
   background-color: rgb(169, 211, 171);
   border: 1px rgb(0, 0, 0) solid;
@@ -238,30 +229,6 @@ th {
   gap: 10px;
 }
 
-/*Llave*/
-.torneo-copa-argentina {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: max-content;
-}
-.torneo-copa-argentina li {
-  list-style: none;
-}
-
-.torneo-copa-argentina .bloque-de-16 ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.bloque-de-16-futuros-rivales {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
 .bloque-de-8 ul {
   display: flex;
   flex-direction: column;
@@ -272,12 +239,6 @@ th {
   display: flex;
   flex-direction: column;
   gap: 94px;
-}
-
-.bloque-de-4-copa-arg ul {
-  display: flex;
-  flex-direction: column;
-  gap: 277px;
 }
 
 .bloque-de-4-futuros-rivales {
@@ -311,10 +272,16 @@ th {
   border: 1px rgb(0, 0, 0) solid;
   background-color: rgb(23, 23, 23);
   color: rgb(42, 138, 109);
+  width: 16.6667%;
+}
+
+.titulo-tabla-copa-arg {
+  width: 100%;
 }
 
 .item-de-partidos {
   border: 1px rgb(0, 0, 0) solid;
+  background-color: rgb(212, 212, 212);
 }
 
 .vacio-de-partidos {
@@ -332,6 +299,9 @@ th {
 
 .partido-equipo-lista-nombre {
   width: 40%;
+}
+.partido-equipo-lista-nombre p {
+  margin: 0;
 }
 
 .equipo-lista-nombre-2 {
@@ -356,7 +326,14 @@ th {
 .partido-puntaje-lista {
   background-color: rgb(169, 211, 171);
   border: 1px rgb(0, 0, 0) solid;
-  padding: 7px 5px;
+  padding: 0 5px;
+  border-top: none;
+}
+
+.partido-penales-lista {
+  background-color: rgb(169, 172, 211);
+  border: 1px rgb(0, 0, 0) solid;
+  padding: 0 5px;
   border-top: none;
 }
 
@@ -374,7 +351,7 @@ th {
   flex-direction: column;
   justify-content: space-around;
   gap: 10px;
-  margin: 20px;
+  margin: 0;
 }
 
 .titulo-copa-de-la-liga {
@@ -385,6 +362,7 @@ th {
 .liguillas {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
 }
 .liguillas section {
   width: auto;
@@ -404,7 +382,7 @@ th {
 .bloque-de-4-copa-liga {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  gap: 10px;
 }
 
 .bloque-de-4-futuros-rivales-copa-liga {
@@ -423,7 +401,7 @@ th {
   border-collapse: collapse;
   border: 1px rgb(0, 0, 0) solid;
   height: 200px;
-  width: 350px;
+  width: 100%;
 }
 .partido-final-copa-liga td {
   text-align: center;
@@ -472,6 +450,7 @@ th {
 .otras-copas-copas {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .copa-de-campeones {
@@ -483,15 +462,19 @@ th {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 30%;
 }
 .copas-bloque div {
   height: 94px;
-  width: min-content;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.partido-otras-copas {
+  width: 100%;
+}
 .partido-otras-copas table {
   border-collapse: collapse;
   background-color: rgb(253, 239, 38);
@@ -500,7 +483,7 @@ th {
 .partido-equipo-otras-copas {
   padding: 5px;
   font-family: "Rubik";
-  width: 150px;
+  width: 50%;
 }
 
 .partido-puntaje-otras-copas {
@@ -1367,15 +1350,26 @@ form .botone-contacto button:hover {
   background-image: url(../multimedia/monumental.webp);
 }
 
+@media (max-width: 1070px) {
+  .bloque-de-4-copa-liga {
+    display: none;
+  }
+}
 /*900px para carusel y proximo Partido*/
 @media (max-width: 900px) {
   /*General*/
   .fondo-pasto {
     background-image: none;
   }
+  .menos-de-900px {
+    display: block;
+  }
   .contenido {
     margin: 0;
     border: none;
+  }
+  .mas-de-900px {
+    display: none;
   }
   /* Index */
   /* Proximo Partido */
@@ -1436,6 +1430,15 @@ form .botone-contacto button:hover {
   }
   ::after {
     display: none;
+  }
+}
+@media (max-width: 793px) {
+  .bloque-de-2-copa-liga {
+    display: none;
+  }
+  .liguillas {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
 @media (max-width: 580px) {
@@ -1654,6 +1657,18 @@ form .botone-contacto button:hover {
     min-width: 0;
   }
   .tabla-fechas td {
+    padding: 0;
+  }
+  /*copas*/
+  .otras-copas-copas {
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: center;
+    flex-wrap: auto;
+    gap: 10px;
+  }
+  .copa-de-campeones {
     padding: 0;
   }
   /* Contacto*/
