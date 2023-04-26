@@ -1,3 +1,7 @@
 .entrada_equipo_river{
     background-image: url(../multimedia/monumental.webp);
+    background-position: center;
+    h1{
+        background-image: $river-color;
+    }
 }
