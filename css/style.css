@@ -765,6 +765,14 @@ th {
   font-weight: 600;
   color: rgb(0, 0, 0);
 }
+.equipo-fecha div {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2px;
+}
 
 .borde-de {
   border-right: 3px rgb(0, 0, 0) solid;
@@ -791,7 +799,8 @@ th {
   table-layout: auto;
   width: 100%;
   border-collapse: collapse;
-  border: 3px solid rgb(0, 0, 0);
+  border-top: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(0, 0, 0);
 }
 
 .tabla-ranking tbody tr:nth-child(odd) {
@@ -1750,6 +1759,9 @@ form .botone-contacto button:hover {
     width: 100%;
     min-width: 0;
   }
+  .fecha li {
+    width: 8%;
+  }
   .tabla-fechas td {
     padding: 0;
   }
@@ -1805,6 +1817,9 @@ form .botone-contacto button:hover {
     height: 280px;
     width: 280px;
   }
+  .tabla-fechas th {
+    padding: 0;
+  }
   .trofeos .fichas_trofeo {
     border-right: none;
     border-left: none;
@@ -1822,6 +1837,9 @@ form .botone-contacto button:hover {
     border-left: none;
     border-right: none;
   }
+  .tabla-equipo .solo-menos-340px {
+    display: initial;
+  }
   .liguillas section {
     width: auto;
     min-width: 0;
@@ -1834,6 +1852,9 @@ form .botone-contacto button:hover {
   .solo-mas-323px {
     display: none;
   }
+  .tabla-equipo .solo-menos-323px {
+    display: initial;
+  }
 }
 @media (max-width: 307px) {
   .solo-menos-307px {
@@ -1841,6 +1862,9 @@ form .botone-contacto button:hover {
   }
   .solo-mas-307px {
     display: none;
+  }
+  .tabla-equipo .solo-menos-307px {
+    display: initial;
   }
 }
 

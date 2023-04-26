@@ -450,6 +450,11 @@
         max-width: 420px;
         width:100%;
         min-width: 0;
+        
+        li{
+            width: 8%;
+        }
+        
     }
 
     .tabla-fechas{
@@ -526,6 +531,13 @@
         }
     }
     
+
+    .tabla-fechas{
+        th{
+            padding: 0;
+        }
+    }
+
     .trofeos {
         .fichas_trofeo{
             border-right: none;
@@ -551,6 +563,12 @@
         }
     }
 
+    .tabla-equipo{
+        .solo-menos-340px{
+            display: initial;
+        }
+    }
+
     .liguillas{
         section{
             width: auto;
@@ -567,6 +585,12 @@
     .solo-mas-323px{
         display: none;
     }
+
+    .tabla-equipo{
+        .solo-menos-323px{
+            display: initial;
+        }
+    }
 }
 
 
@@ -577,5 +601,11 @@
 
     .solo-mas-307px{
         display: none;
+    }
+
+    .tabla-equipo{
+        .solo-menos-307px{
+            display: initial;
+        }
     }
 }

@@ -229,6 +229,9 @@
     background-color: rgb(23, 75, 59);
     font-weight: 600;
     color: rgb(0, 0, 0);
+    div{
+        @include flex(column,auto,center,nowrap,2px);
+    }
 }
 
 .borde-de {
@@ -258,7 +261,8 @@
         table-layout: auto;
         width: 100%;
         border-collapse: collapse;
-        border: 3px solid rgb(0, 0, 0);
+        border-top: 3px solid rgb(0, 0, 0);
+        border-bottom: 3px solid rgb(0, 0, 0);
     }
 }
 
