@@ -89,6 +89,20 @@
     }
 }
 
+.indices-tabla-liga{
+    background-color: rgb(201, 201, 201);
+    color: rgb(0, 0, 0);
+    font-family: 'Arial';
+    font-weight: 600;
+    text-align: center;
+    padding: 0 3px;   
+}
+
+.indices-liga{
+    border-top: 2px rgb(0, 0, 0) solid;
+}
+
+
 .tabla-start {
     border-left: 1px solid rgb(0, 0, 0);
 }
@@ -125,17 +139,26 @@
         text-align: center;
 
         &:hover{
-            transition: 0.25s;
+            transition: 0.6s;
             background-color: $color-datos;
             color: rgb(0, 0, 0);
             font-size: 20px;
+            width: 10%;
         }
     }
 
     .flecha-fecha{
         width: 10%;
         font-weight: 900;
+        &:hover{
+            width: 11%;
+        }
     }
+
+    .actual{
+    background-color: $color-datos;
+    color: rgb(0, 0, 0);
+}
 }
 
 .num-fuera-rango{
@@ -210,6 +233,18 @@
     border-left: none;
 }
 
+.indices-ranking-liga{
+    border-top: 2px rgb(0, 0, 0) solid;
+    th{
+        text-align: center;
+        border-right: 2px rgb(0, 0, 0) solid;
+    }
+    td{
+        padding-left: 5px;
+        border-right: 1px rgb(0, 0, 0) solid;
+    }
+}
+
 .fecha-terminado {
     background-color: rgb(158, 158, 158);
 }
@@ -279,4 +314,9 @@
             }
         }
     }
+}
+
+
+.sin-borde-abajo{
+    border-bottom: 1px rgb(0, 0, 0) solid;
 }

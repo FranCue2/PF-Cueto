@@ -112,9 +112,14 @@
             background-color: rgba(22, 22, 22, 0.493);
             width: 100%;
 
-            p,
+            h4,
             h3 {
                 color: rgb(126, 206, 182);
+            }
+
+            span,li{
+                color:rgb(231, 209, 5);
+                font-weight: 600;
             }
         }
 
@@ -285,7 +290,6 @@
 
     .proximo-partido-img-mobile {
         display: none;
-        background-image: linear-gradient(135deg,rgb(0, 0, 216),rgb(0,0,0),rgb(219, 0, 0));
         background-size: cover;
         background-position: center;
         flex-direction: column;
@@ -401,6 +405,8 @@
 
     .entrada_equipo{
         width: 100%;
+        height: 360px;
+
         img{
             width: 75px;
         }
@@ -505,6 +511,18 @@
     }
 
 }
+
+@media (max-width: 435px) {
+    .solo-menos-435px{
+        display: block;
+    }
+
+    .solo-mas-435px{
+        display: none;
+    }
+}
+
+
 
 @media (max-width: 340px){
 

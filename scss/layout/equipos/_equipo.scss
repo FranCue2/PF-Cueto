@@ -8,10 +8,6 @@
     @include flex(row, space-around, auto, wrap, 10px);
 }
 
-.fondo-bombonera-equipo{
-    background-image: url(../multimedia/bombonera.webp);
-}
-
 .fondo-equipo-entrada{
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,14 +44,6 @@
         color: transparent;
     }
     
-    p{
-        background-color: rgba(23, 23, 23, 0.616);
-        color: $text_color_fondo_elementos;
-        width: fit-content;
-        border: 2px rgb(0, 0, 0) solid;
-        height: fit-content;
-    }
-
     span{
         color: $color-datos;
     }
@@ -81,7 +69,17 @@
 
 .detalles_entrada{
     grid-area: detalles;
-    display: flex;
+    @include flex(column, left, left, nowrap, 0);
+    background-color: rgba(23, 23, 23, 0.616);
+    width: fit-content;
+    border: 2px rgb(0, 0, 0) solid;
+    height: fit-content;
+    padding: 5px;
+
+    p{
+        color: $text_color_fondo_elementos;
+        margin: 0;
+    }
 }
 
 /*Calendario*/
@@ -122,12 +120,20 @@
     background-color: rgb(173, 255, 47);
 }
 
+.partido-amistoso{
+    background-color: rgb(117, 196, 0);
+}
+
 .partido-copa-argentina{
     background-color: rgb(70, 255, 193);
 }
 
 .partido-supercopa{
     background-color: rgb(255, 255, 0);
+}
+
+.indices-calendario{
+    border-top: 2px rgb(0, 0, 0) solid;
 }
 
 .nombre-mes{
@@ -170,7 +176,7 @@
     flex-direction: column;
     margin-top: 10px;
     gap: 2px;
-    background-color: rgba(255, 255, 255, 0.788);
+    background-color: rgb(204, 204, 204);
     border: 3px rgb(0, 0, 0) solid;
 
     h2{
@@ -178,6 +184,33 @@
         background-color: $fondo_elementos;
         color: $text_color_fondo_elementos;
     }
+
+    h3{
+        padding-left: 10px;
+    }
+
+    p{
+        padding-left: 10px;
+        margin-bottom: 0;
+        color: rgb(33, 37, 41);
+        font-weight: 600;
+
+        &:last-child{
+            margin-bottom: 5px;
+        }
+
+        span{
+            color: rgb(17, 17, 14);
+        }
+    }
+
+    img{
+        height: 180px
+    }
+}
+
+.contenido-rival-historico{
+    @include flex(row, space-around, center, wrap, 0);
 }
 
 /*Ultimo Plantel*/
